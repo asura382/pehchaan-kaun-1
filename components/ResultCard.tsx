@@ -80,11 +80,13 @@ export default function ResultCard({
       const blob = await (await fetch(dataUrl)).blob()
       const file = new File([blob], `pehchaan-kaun-${puzzleIndex + 1}.png`, { type: 'image/png' })
       
-      // Prepare share text
+      // Prepare share text (NO ANSWER - prevent spoilers)
+      const scoreMsg = won ? `Got it in ${cluesUsed} clue${cluesUsed > 1 ? 's' : ''}! 🎉` : 'Game Over 😔'
       const shareText = `Pehchaan Kaun? 🇮🇳 #${puzzleIndex + 1}
 Category: ${category}
 ${emojiGrid}
-${won ? `Got it in ${cluesUsed} clue${cluesUsed > 1 ? 's' : ''}! 🎉` : 'Game Over 😔'}
+${scoreMsg}
+Kya tum pehchaan sakte ho? 🤔
 Play at: pehchaankaun.vercel.app`
       
       // Check if Web Share API is supported (mobile)
@@ -116,10 +118,12 @@ Play at: pehchaankaun.vercel.app`
   }
 
   const copyText = () => {
+    const scoreMsg = won ? `Got it in ${cluesUsed} clue${cluesUsed > 1 ? 's' : ''}! 🎉` : 'Game Over 😔'
     const shareText = `Pehchaan Kaun? 🇮🇳 #${puzzleIndex + 1}
 Category: ${category}
 ${emojiGrid}
-${won ? `Got it in ${cluesUsed} clue${cluesUsed > 1 ? 's' : ''}! 🎉` : 'Game Over 😔'}
+${scoreMsg}
+Kya tum pehchaan sakte ho? 🤔
 Play at: pehchaankaun.vercel.app`
     
     navigator.clipboard.writeText(shareText).then(() => {
@@ -158,14 +162,35 @@ Play at: pehchaankaun.vercel.app`
           PEHCHAAN KAUN CARD 🔥
         </div>
 
-        {/* Answer */}
-        <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#ffffff', margin: '20px 0 10px 0' }}>
-          {answer}
+        {/* Puzzle Number - BIG BOLD (replaces answer) */}
+        <div style={{ fontSize: '28px', fontWeight: 'bold', color: '#ffffff', margin: '10px 0 15px 0' }}>
+          Puzzle #{puzzleIndex + 1}
         </div>
 
-        {/* Meta */}
-        <div style={{ fontSize: '13px', color: '#94a3b8', fontWeight: '600', marginBottom: '25px' }}>
-          {category} • Puzzle #{puzzleIndex + 1}
+        {/* Category Badge */}
+        <div style={{ 
+          display: 'inline-block',
+          background: 'linear-gradient(135deg, rgba(148, 163, 184, 0.2), rgba(100, 116, 139, 0.1))',
+          border: '1px solid rgba(148, 163, 184, 0.3)',
+          borderRadius: '20px',
+          padding: '6px 16px',
+          fontSize: '13px',
+          color: '#cbd5e1',
+          fontWeight: '600',
+          marginBottom: '15px'
+        }}>
+          {category}
+        </div>
+
+        {/* Mystery Line */}
+        <div style={{ 
+          fontSize: '14px', 
+          color: '#FF9933', 
+          fontWeight: '600', 
+          margin: '10px 0 20px 0',
+          fontStyle: 'italic'
+        }}>
+          Kya tum pehchaan sakte ho? 🤔
         </div>
 
         {/* Divider */}
