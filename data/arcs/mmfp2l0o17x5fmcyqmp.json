@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Beginning of Humiliation",
+    "arcGoal": "Alex must survive the first year and find a way to prove themselves in the academy.",
+    "arcConflict": "Alex faces public humiliation by the academy's wealthy and powerful students, who mock their humble background and lack of magical talent.",
+    "emotionalShift": "Alex goes from feeling inferior and alone to starting to find allies among other outcasts and discovering hidden strengths.",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "Rising from the Ashes",
+    "arcGoal": "Alex seeks to gain recognition and prove their worth in the academy by outperforming their rivals in a major tournament.",
+    "arcConflict": "Alex must navigate the treacherous politics of the academy while preparing for the tournament, which is rigged against outsiders like themselves.",
+    "emotionalShift": "Alex transitions from feeling defeated and isolated to gaining confidence and forming a sense of camaraderie with their allies.",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Dark Alliance",
+    "arcGoal": "Alex uncovers a plot by the academy's hierarchy to suppress magic and seeks to expose it to save their classmates from impending danger.",
+    "arcConflict": "Alex faces betrayal from a trusted friend and must navigate a web of lies and deceit within the academy to uncover the truth.",
+    "emotionalShift": "Alex experiences a range of emotions from shock and anger to determination and resolve, leading to a stronger bond with their allies.",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "Rise to Power",
+    "arcGoal": "Alex leads a rebellion against the academy's corrupt leadership and establishes a new, fairer system for magic education.",
+    "arcConflict": "Alex and their allies face a final, climactic battle against the academy's elite students and staff, who will stop at nothing to maintain their power.",
+    "emotionalShift": "Alex transitions from a low-ranked student to a respected leader, facing the consequences of their actions and the responsibility that comes with power.",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]

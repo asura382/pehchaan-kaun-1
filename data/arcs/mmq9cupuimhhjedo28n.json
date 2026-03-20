@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Humiliation",
+    "arcGoal": "Alex must survive the initial public humiliation and gain allies among his peers.",
+    "arcConflict": "At the grand ceremony, Alex fails an important test and is publicly shamed by the academy's higher ranks. He faces immediate bullying from classmates and a harsh punishment of solitary confinement for 24 hours.",
+    "emotionalShift": "From despair to determination; Alex finds strength in his resolve not to let this define him.",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "Seeking Allies",
+    "arcGoal": "Alex begins to uncover the academy's dark secrets and forms alliances with other outcasts to challenge the corrupt system.",
+    "arcConflict": "Alex meets other students who have faced similar injustices and they form a secret society. However, their initial actions are met with resistance from both the academy staff and the more powerful students.",
+    "emotionalShift": "From isolation to camaraderie; Alex learns about the true nature of friendship and loyalty in the face of adversity.",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Rebellion",
+    "arcGoal": "Alex leads a rebellion against the corrupt academy leadership, using their knowledge of the system's flaws to turn the tides in his favor.",
+    "arcConflict": "As Alex and his allies gather more information, they plot a daring move to expose the academy’s corruption. However, their plans are thwarted by an unexpected betrayal from within their group.",
+    "emotionalShift": "From hope to betrayal; Alex must regroup and find new strategies despite the setback.",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "Victory",
+    "arcGoal": "Alex confronts the corrupt leadership of the academy, bringing them down to expose their wrongdoings and secure his rightful place in the academy's hierarchy.",
+    "arcConflict": "In a climactic confrontation with the headmaster, Alex must use all his knowledge and allies' support to challenge the corrupt system. The battle is fierce, but ultimately, justice prevails.",
+    "emotionalShift": "From triumph to redemption; Alex achieves victory, not just for himself, but for everyone who has suffered under the academy's oppressive rule.",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]

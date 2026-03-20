@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Shadows of Humiliation",
+    "arcGoal": "Alex must confront the public shaming and find a way to prove his worth.",
+    "arcConflict": "Public humiliation at the hands of the academy's elite students leaves Alex with a deep sense of injustice and a burning desire for revenge and redemption.",
+    "emotionalShift": "From despair and self-doubt, Alex begins to see himself as capable of more than he ever imagined. He starts to question the rigid class structure of the academy and its unfairness.",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Path of Secrets",
+    "arcGoal": "Alex seeks out forbidden knowledge to strengthen his magic and gain an edge over his peers.",
+    "arcConflict": "Discovering hidden libraries and ancient secrets comes at a cost, as Alex must navigate the dangerous web of spies and double agents within the academy's walls. He faces harsh punishments from both teachers and students who catch him venturing into restricted areas.",
+    "emotionalShift": "Alex's resilience grows as he learns to trust his allies and outmaneuver those who seek to undermine him. He begins to understand that power can be wielded in many ways, not just through magic.",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Rise of a Revolutionary",
+    "arcGoal": "Alex assembles a coalition of like-minded students to challenge the oppressive hierarchy and expose corruption within the academy.",
+    "arcConflict": "As Alex gains allies, he faces increasing pressure from both sides: his desire for change clashes with the fear of retribution. His actions begin to attract unwanted attention from powerful figures who will stop at nothing to silence him.",
+    "emotionalShift": "Alex transforms from a student seeking personal vindication into a leader dedicated to social justice and equality. He learns the importance of sacrifice and the strength that comes from unity.",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Final Showdown",
+    "arcGoal": "Alex confronts his ultimate enemy and brings about a revolution within the academy, reshaping its power structure to be more equitable.",
+    "arcConflict": "In a climactic battle against the corrupt Chancellor who orchestrated Alex's initial humiliation, he must use all his knowledge, magic, and allies. The stakes are high as the fate of the entire academy hangs in the balance.",
+    "emotionalShift": "From a position of vulnerability to one of empowerment, Alex triumphs not just over his enemies but also over his own doubts and fears. He emerges as a symbol of hope for the oppressed and a beacon of change.",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]

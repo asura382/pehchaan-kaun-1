@@ -1,0 +1,565 @@
+[
+  {
+    "id": "mm050ospa4uy5er2wgp",
+    "title": "The Last Dragon Keeper",
+    "theme": "A young orphan discovers they are the last descendant of dragon keepers and must prevent an ancient evil from awakening",
+    "genre": "Fantasy Adventure",
+    "tone": "Epic and mysterious with moments of wonder",
+    "worldRules": "Magic exists but is fading; Dragons are real but mostly dormant; Ancient prophecies guide the fate of kingdoms",
+    "mainCharacter": "Kira, a 16-year-old orphan with mysterious dragon-markings on her arms",
+    "sideCharacters": [
+      "Elder Thorne - Village sage who knows the old ways",
+      "Zephyr - A young thief with a heart of gold"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-02-24T05:00:51.721Z",
+    "updatedAt": "2026-02-24T05:00:51.721Z"
+  },
+  {
+    "id": "mm053kovcpdfg6wtlrf",
+    "title": "The Last Dragon Keeper",
+    "theme": "A young orphan discovers they are the last descendant of dragon keepers and must prevent an ancient evil from awakening",
+    "genre": "Fantasy Adventure",
+    "tone": "Epic and mysterious with moments of wonder",
+    "worldRules": "Magic exists but is fading; Dragons are real but mostly dormant; Ancient prophecies guide the fate of kingdoms",
+    "mainCharacter": "Kira, a 16-year-old orphan with mysterious dragon-markings on her arms",
+    "sideCharacters": [
+      "Elder Thorne - Village sage who knows the old ways",
+      "Zephyr - A young thief with a heart of gold"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-02-24T05:03:06.367Z",
+    "updatedAt": "2026-02-24T05:03:06.367Z"
+  },
+  {
+    "id": "mm0f6986ip7w6j668ir",
+    "title": "Echoes of the Devoured",
+    "theme": "A morally gray cultivator who absorbs memories from the dead and slowly loses his own identity.",
+    "genre": "Dark fantasy progression",
+    "tone": "Philosophical, intense, tragic",
+    "worldRules": "Power comes from consuming fragmented souls. Each soul alters personality and memories.",
+    "mainCharacter": "Kael Veyron, a disciplined but emotionally distant cultivator obsessed with strength.",
+    "sideCharacters": [],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-02-24T09:45:07.638Z",
+    "updatedAt": "2026-02-24T09:45:07.638Z"
+  },
+  {
+    "id": "mm0fjc8pj1yk5o07rd",
+    "title": "Echoes of the Devoured",
+    "theme": "A morally gray cultivator who absorbs memories from the dead and slowly loses his own identity.",
+    "genre": "Dark fantasy progression",
+    "tone": "Philosophical, intense, tragic",
+    "worldRules": "Power comes from consuming fragmented souls. Each soul alters personality and memories.",
+    "mainCharacter": "Kael Veyron, a disciplined but emotionally distant cultivator obsessed with strength.",
+    "sideCharacters": [],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-02-24T09:55:18.073Z",
+    "updatedAt": "2026-02-24T09:55:18.073Z"
+  },
+  {
+    "id": "mm0fxs9n47lhm821v9s",
+    "title": "Echoes of the Devoured",
+    "theme": "A morally gray cultivator who absorbs memories from the dead and slowly loses his own identity.",
+    "genre": "Dark fantasy progression",
+    "tone": "Philosophical, intense, tragic",
+    "worldRules": "Power comes from consuming fragmented souls. Each soul alters personality and memories.",
+    "mainCharacter": "Kael Veyron, a disciplined but emotionally distant cultivator obsessed with strength.",
+    "sideCharacters": [],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-02-24T10:06:32.027Z",
+    "updatedAt": "2026-02-24T10:06:32.027Z"
+  },
+  {
+    "id": "mm0g5x5rppjjq6ditr",
+    "title": "Echoes of the Devoured",
+    "theme": "A morally gray cultivator who absorbs memories from the dead and slowly loses his own identity.",
+    "genre": "Dark fantasy progression",
+    "tone": "Philosophical, intense, tragic",
+    "worldRules": "Power comes from consuming fragmented souls. Each soul alters personality and memories.",
+    "mainCharacter": "Kael Veyron, a disciplined but emotionally distant cultivator obsessed with strength.",
+    "sideCharacters": [],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-02-24T10:12:51.615Z",
+    "updatedAt": "2026-02-24T10:12:51.615Z"
+  },
+  {
+    "id": "mm0kl5ffred3jc4h9ma",
+    "title": "Echoes of the Devoured",
+    "theme": "A morally gray cultivator who absorbs memories from the dead and slowly loses his own identity.",
+    "genre": "Dark fantasy progression",
+    "tone": "Philosophical, intense, tragic",
+    "worldRules": "Power comes from consuming fragmented souls. Each soul alters personality and memories.",
+    "mainCharacter": "Kael Veyron, a disciplined but emotionally distant cultivator obsessed with strength.",
+    "sideCharacters": [],
+    "totalChapters": 20,
+    "currentChapter": 1,
+    "status": "active",
+    "createdAt": "2026-02-24T12:16:40.635Z",
+    "updatedAt": "2026-02-24T12:24:10.159Z"
+  },
+  {
+    "id": "mm0sv7rxz07ahdi56c",
+    "title": "Test Novel",
+    "genre": "academy power fantasy",
+    "sideCharacters": [],
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-02-24T16:08:27.165Z",
+    "updatedAt": "2026-02-24T16:08:27.166Z"
+  },
+  {
+    "id": "mm0t6vxp0lhkf4gp9iii",
+    "title": "Test Novel",
+    "genre": "academy power fantasy",
+    "sideCharacters": [],
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-02-24T16:17:31.693Z",
+    "updatedAt": "2026-02-24T16:17:31.694Z"
+  },
+  {
+    "id": "mm27f2qb0jyv4iy6uw8e",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-02-25T15:43:34.547Z",
+    "updatedAt": "2026-02-25T15:43:34.549Z"
+  },
+  {
+    "id": "mm27fsht9q13mo2pe47",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-02-25T15:44:07.937Z",
+    "updatedAt": "2026-02-25T15:44:07.938Z"
+  },
+  {
+    "id": "mm27haduu07v0ek4f1c",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-02-25T15:45:17.778Z",
+    "updatedAt": "2026-02-25T15:45:17.779Z"
+  },
+  {
+    "id": "mm27ulegfqoiv1l730g",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-02-25T15:55:38.584Z",
+    "updatedAt": "2026-02-25T15:55:38.586Z"
+  },
+  {
+    "id": "mm28ej86wwq1qwggmn8",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-02-25T16:11:08.886Z",
+    "updatedAt": "2026-02-25T16:11:08.886Z"
+  },
+  {
+    "id": "mm28x9k4sjo89w9jjyr",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-02-25T16:25:42.820Z",
+    "updatedAt": "2026-02-25T16:25:42.821Z"
+  },
+  {
+    "id": "mm3dm1gpv35b7g9a22i",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-02-26T11:24:43.369Z",
+    "updatedAt": "2026-02-26T11:24:43.371Z"
+  },
+  {
+    "id": "mm4qkmw1hr9fma0d51a",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 1,
+    "status": "active",
+    "createdAt": "2026-02-27T10:15:19.009Z",
+    "updatedAt": "2026-02-27T10:53:10.453Z"
+  },
+  {
+    "id": "mm4wc0m0djzbx4aw3xn",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 1,
+    "status": "active",
+    "createdAt": "2026-02-27T12:56:34.584Z",
+    "updatedAt": "2026-02-27T13:22:24.071Z"
+  },
+  {
+    "id": "mm4yt3huh3q4mhtuqqp",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 1,
+    "status": "active",
+    "createdAt": "2026-02-27T14:05:50.706Z",
+    "updatedAt": "2026-02-27T14:24:14.167Z"
+  },
+  {
+    "id": "mm51poxxktl93vzntp",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 1,
+    "status": "active",
+    "createdAt": "2026-02-27T15:27:10.725Z",
+    "updatedAt": "2026-02-27T15:51:59.243Z"
+  },
+  {
+    "id": "mm5s1d96e0737v9g78i",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 1,
+    "status": "active",
+    "createdAt": "2026-02-28T03:44:05.466Z",
+    "updatedAt": "2026-02-28T04:08:31.862Z"
+  },
+  {
+    "id": "mmeze8jt1c8xzlmnypj",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-03-06T14:19:58.793Z",
+    "updatedAt": "2026-03-06T14:19:58.795Z"
+  },
+  {
+    "id": "mmf26m9amcy30alkfi",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-03-06T15:38:02.158Z",
+    "updatedAt": "2026-03-06T15:38:02.159Z"
+  },
+  {
+    "id": "mmfp2l0o17x5fmcyqmp",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 1,
+    "status": "active",
+    "createdAt": "2026-03-07T02:18:45.096Z",
+    "updatedAt": "2026-03-07T02:47:08.146Z"
+  },
+  {
+    "id": "mmos52o5upzn3ocbv5",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-03-13T10:54:35.717Z",
+    "updatedAt": "2026-03-13T10:54:35.748Z"
+  },
+  {
+    "id": "mmou46g8xgl6btf3ued",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 1,
+    "status": "active",
+    "createdAt": "2026-03-13T11:49:53.192Z",
+    "updatedAt": "2026-03-13T12:06:40.240Z"
+  },
+  {
+    "id": "mmouv99i83t7ws526lv",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 1,
+    "status": "active",
+    "createdAt": "2026-03-13T12:10:56.550Z",
+    "updatedAt": "2026-03-13T12:27:28.062Z"
+  },
+  {
+    "id": "mmp35by56bj0m7ii4zv",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-03-13T16:02:43.517Z",
+    "updatedAt": "2026-03-13T16:02:43.518Z"
+  },
+  {
+    "id": "mmp3opy0u5q949ygnn",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-03-13T16:17:48.120Z",
+    "updatedAt": "2026-03-13T16:17:48.121Z"
+  },
+  {
+    "id": "mmq25nt30rfvp9nom96g",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-03-14T08:22:45.447Z",
+    "updatedAt": "2026-03-14T08:22:45.448Z"
+  },
+  {
+    "id": "mmq2idrojxsdb76xpvo",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-03-14T08:32:38.964Z",
+    "updatedAt": "2026-03-14T08:32:38.965Z"
+  },
+  {
+    "id": "mmq2n7pqrmawi4q089",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 0,
+    "status": "active",
+    "createdAt": "2026-03-14T08:36:24.399Z",
+    "updatedAt": "2026-03-14T08:36:24.399Z"
+  },
+  {
+    "id": "mmq9cupuimhhjedo28n",
+    "title": "Test Novel",
+    "theme": "A low-ranked student faces public humiliation and begins their rise to power",
+    "genre": "Fantasy Academy",
+    "tone": "Dark and intense with moments of triumph",
+    "worldRules": "Magic exists but is strictly controlled by the academy hierarchy",
+    "mainCharacter": "Alex, a 17-year-old student from a poor family",
+    "sideCharacters": [
+      "Professor Drake - Strict academy instructor",
+      "Maya - Fellow student and rival"
+    ],
+    "totalChapters": 20,
+    "currentChapter": 1,
+    "status": "active",
+    "createdAt": "2026-03-14T11:44:18.307Z",
+    "updatedAt": "2026-03-14T12:11:43.482Z"
+  }
+]

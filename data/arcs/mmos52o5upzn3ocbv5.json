@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Humiliation",
+    "arcGoal": "Alex must endure the public humiliation and find a way to reclaim their dignity",
+    "arcConflict": "Alex is publicly humiliated by the academy’s upperclassmen and faces a severe punishment from the Headmaster for a minor infraction, which devastates their reputation and self-esteem",
+    "emotionalShift": "Alex goes from feeling hopeless and defeated to starting to find small sources of strength and resilience within themselves",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Secret Discovery",
+    "arcGoal": "Alex uncovers a hidden talent and begins to secretly study and practice forbidden magic",
+    "arcConflict": "Alex discovers an ancient spellbook in the restricted section of the library and is tempted to use its forbidden magic to regain their lost standing, but faces the risk of being caught and punished",
+    "emotionalShift": "Alex begins to find purpose and excitement in their studies, but also feels a growing sense of fear and paranoia about being discovered",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Rise of Shadows",
+    "arcGoal": "Alex builds a secret network of allies and begins to challenge the academy’s rigid hierarchy",
+    "arcConflict": "Alex forms a group of like-minded students who share their desire for change, but their actions are noticed by the academy’s administration, leading to a series of dangerous confrontations and close calls",
+    "emotionalShift": "Alex transitions from a passive observer to an active participant in the struggle for change, developing leadership skills and gaining the respect of their peers",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Climax of Power",
+    "arcGoal": "Alex confronts the academy’s corrupt leadership and exposes their secrets, leading to a decisive victory for the oppressed students",
+    "arcConflict": "Alex and their allies stage a daring uprising against the Headmaster and the academy’s leadership, facing a final showdown where they must prove their worth and expose the corruption that has been holding the academy back",
+    "emotionalShift": "Alex experiences a sense of triumph and fulfillment, but also a realization of the true cost of their actions and the ongoing struggle for justice",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]

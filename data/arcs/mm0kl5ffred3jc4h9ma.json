@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Obsessive Pursuit",
+    "arcGoal": "Unlock the secrets of soul absorption and surpass his peers",
+    "arcConflict": "Kael's obsession with strength leads to neglecting relationships and questioning his own identity",
+    "emotionalShift": "From detachment to desperation, Kael begins to crave human connection",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Weight of Memories",
+    "arcGoal": "Understand the nature of memories and the cost of absorbing them",
+    "arcConflict": "Kael's growing identity crisis worsens as he struggles to integrate new memories",
+    "emotionalShift": "From desperation to despair, Kael confronts the reality of losing himself",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Price of Power",
+    "arcGoal": "Find a way to balance his strength with his humanity and relationships",
+    "arcConflict": "Kael's reputation as a ruthless cultivator puts him at odds with those he cares about",
+    "emotionalShift": "From despair to determination, Kael seeks redemption and self-acceptance",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Echoes of Redemption",
+    "arcGoal": "Make amends for past mistakes and find a new path forward",
+    "arcConflict": "Kael faces the consequences of his actions and must confront the darkness within himself",
+    "emotionalShift": "From determination to introspection, Kael finds peace in self-acceptance and forgiveness",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]

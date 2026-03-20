@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Humiliation",
+    "arcGoal": "Alex must face and overcome the public humiliation he suffers at the hands of his peers and teachers, gaining strength and resolve.",
+    "arcConflict": "Alex is publicly humiliated by his peers and teachers for his low rank, leading to a crisis of confidence and a struggle to find his place in the academy.",
+    "emotionalShift": "Alex experiences deep humiliation and self-doubt, but begins to see the injustice of the system and starts to develop a hidden resolve.",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "Discovering the Magic",
+    "arcGoal": "Alex uncovers a hidden magical talent and begins to use it in secret, slowly gaining confidence and power.",
+    "arcConflict": "Alex discovers a hidden magical ability but is torn between using it and the academy's strict rules on magic, leading to internal conflict and potential discovery.",
+    "emotionalShift": "Alex gains confidence in his magical abilities, starts to trust himself, and becomes more assertive in his interactions with others.",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Rise Begins",
+    "arcGoal": "Alex uses his newfound powers and knowledge to gain allies and support, slowly climbing the ranks within the academy.",
+    "arcConflict": "Alex faces resistance and opposition from his peers and teachers as he tries to gain support and rank, leading to a series of strategic and tactical challenges.",
+    "emotionalShift": "Alex gains allies and begins to feel a sense of belonging and purpose, transforming from a victim to a leader.",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Climactic Showdown",
+    "arcGoal": "Alex confronts the true power and corruption within the academy, leading to a final showdown that determines his future and the fate of the academy.",
+    "arcConflict": "Alex discovers the true extent of the academy's corruption and faces a powerful enemy, leading to a dramatic and intense climax.",
+    "emotionalShift": "Alex faces his greatest challenge and emerges victorious, proving his worth and changing the course of the academy's history.",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]

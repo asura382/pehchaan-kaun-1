@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Fall and Humiliation",
+    "arcGoal": "To survive the public humiliation and find a way to protect oneself within the academy's hierarchy.",
+    "arcConflict": "Alex faces relentless bullying from upper-class students, leading to a humiliating public incident that threatens their academic standing.",
+    "emotionalShift": "From feeling isolated and desperate to surviving with newfound determination and a hidden resolve.",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "Seeking Redemption",
+    "arcGoal": "To prove oneself and regain respect among peers by excelling in magic exams despite the odds.",
+    "arcConflict": "Alex struggles with self-doubt after their public humiliation, facing challenges from both magical tests and internal conflicts.",
+    "emotionalShift": "From feeling broken to gradually finding strength through personal growth and unexpected support from a mentor.",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "Rising Through Darkness",
+    "arcGoal": "To uncover the truth behind the academy's strict magic laws and expose corruption to gain power within the system.",
+    "arcConflict": "Alex discovers a conspiracy involving the senior staff, leading to personal danger as they gather evidence and plot an uprising.",
+    "emotionalShift": "From feeling powerless to taking control of their destiny by leading a rebellion against injustice.",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Final Triumph",
+    "arcGoal": "To secure the safety and justice for all students, including those from lower ranks, through political maneuvering and direct action.",
+    "arcConflict": "Alex faces a final confrontation with the corrupt senior staff, balancing the desire to protect their allies while ensuring their own safety.",
+    "emotionalShift": "From struggling with fear of failure to achieving victory and gaining the respect they so desperately sought.",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]

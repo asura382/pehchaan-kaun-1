@@ -1,0 +1,119 @@
+{"timestamp":"2026-03-13T10:54:35.750Z","level":"info","message":"Novel created: mmos52o5upzn3ocbv5 - Test Novel","meta":{}}
+{"timestamp":"2026-03-13T10:54:35.751Z","level":"info","message":"Novel created: mmos52o5upzn3ocbv5 - Test Novel","meta":{}}
+{"timestamp":"2026-03-13T10:56:09.360Z","level":"info","message":"Structure generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T10:56:09.361Z","level":"info","message":"Generated 4 arcs for novel mmos52o5upzn3ocbv5","meta":{}}
+{"timestamp":"2026-03-13T10:56:09.366Z","level":"info","message":"Initialized memory for novel mmos52o5upzn3ocbv5","meta":{}}
+{"timestamp":"2026-03-13T10:56:09.367Z","level":"info","message":"Starting genre-agnostic chapter generation pipeline for novel mmos52o5upzn3ocbv5 - Chapter 1 (Genre: Fantasy Academy, Target: 2200 words)","meta":{}}
+{"timestamp":"2026-03-13T10:56:09.367Z","level":"info","message":"Step 1: Generating escalation blueprint...","meta":{}}
+{"timestamp":"2026-03-13T10:57:37.451Z","level":"info","message":"Structure generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T10:57:37.452Z","level":"info","message":"Step 2: Generating 3-Act structured outline...","meta":{}}
+{"timestamp":"2026-03-13T10:59:48.547Z","level":"info","message":"Structure generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T10:59:48.547Z","level":"info","message":"Step 3: Generating Act I (Establishment)...","meta":{}}
+{"timestamp":"2026-03-13T11:02:42.629Z","level":"info","message":"Scene generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T11:02:42.630Z","level":"info","message":"Step 4: Generating Act II (Escalation)...","meta":{}}
+{"timestamp":"2026-03-13T11:05:45.102Z","level":"info","message":"Scene generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T11:05:45.102Z","level":"info","message":"Step 5: Generating Act III (Shift)...","meta":{}}
+{"timestamp":"2026-03-13T11:09:03.756Z","level":"info","message":"Scene generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T11:09:03.756Z","level":"info","message":"Step 6: Applying duplication detection...","meta":{}}
+{"timestamp":"2026-03-13T11:09:03.759Z","level":"info","message":"Step 7: Applying context continuity check...","meta":{}}
+{"timestamp":"2026-03-13T11:09:03.760Z","level":"info","message":"Step 8: Applying emotional enhancement to final 25%...","meta":{}}
+{"timestamp":"2026-03-13T11:09:03.760Z","level":"error","message":"Failed to generate chapter 1 for novel mmos52o5upzn3ocbv5","meta":{"error":"this.emotionalAmplifier.amplify is not a function"}}
+{"timestamp":"2026-03-13T11:49:53.196Z","level":"info","message":"Novel created: mmou46g8xgl6btf3ued - Test Novel","meta":{}}
+{"timestamp":"2026-03-13T11:49:53.196Z","level":"info","message":"Novel created: mmou46g8xgl6btf3ued - Test Novel","meta":{}}
+{"timestamp":"2026-03-13T11:51:15.829Z","level":"info","message":"Structure generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T11:51:15.830Z","level":"info","message":"Generated 4 arcs for novel mmou46g8xgl6btf3ued","meta":{}}
+{"timestamp":"2026-03-13T11:51:15.835Z","level":"info","message":"Initialized memory for novel mmou46g8xgl6btf3ued","meta":{}}
+{"timestamp":"2026-03-13T11:51:15.835Z","level":"info","message":"Starting genre-agnostic chapter generation pipeline for novel mmou46g8xgl6btf3ued - Chapter 1 (Genre: Fantasy Academy, Target: 2200 words)","meta":{}}
+{"timestamp":"2026-03-13T11:51:15.835Z","level":"info","message":"Step 1: Generating escalation blueprint...","meta":{}}
+{"timestamp":"2026-03-13T11:52:27.999Z","level":"info","message":"Structure generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T11:52:28.000Z","level":"info","message":"Step 2: Generating 3-Act structured outline...","meta":{}}
+{"timestamp":"2026-03-13T11:54:33.579Z","level":"info","message":"Structure generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T11:54:33.579Z","level":"info","message":"Step 3: Generating Act I (Establishment)...","meta":{}}
+{"timestamp":"2026-03-13T11:57:22.103Z","level":"info","message":"Scene generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T11:57:22.104Z","level":"info","message":"Step 4: Generating Act II (Escalation)...","meta":{}}
+{"timestamp":"2026-03-13T12:00:19.875Z","level":"info","message":"Scene generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T12:00:19.875Z","level":"info","message":"Step 5: Generating Act III (Shift)...","meta":{}}
+{"timestamp":"2026-03-13T12:03:30.908Z","level":"info","message":"Scene generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T12:03:30.908Z","level":"info","message":"Step 6: Applying duplication detection...","meta":{}}
+{"timestamp":"2026-03-13T12:03:30.909Z","level":"info","message":"Step 7: Applying context continuity check...","meta":{}}
+{"timestamp":"2026-03-13T12:03:30.910Z","level":"info","message":"Step 8: Applying emotional enhancement to final 25%...","meta":{}}
+{"timestamp":"2026-03-13T12:05:13.948Z","level":"info","message":"Emotional enhancement completed with llama3","meta":{}}
+{"timestamp":"2026-03-13T12:05:13.949Z","level":"warn","message":"Enhancement added too many paragraphs, using original content","meta":{}}
+{"timestamp":"2026-03-13T12:05:13.950Z","level":"info","message":"Step 10: Validating escalation structure...","meta":{}}
+{"timestamp":"2026-03-13T12:05:13.951Z","level":"info","message":"Step 11: Checking quality and handling regeneration if needed...","meta":{}}
+{"timestamp":"2026-03-13T12:05:13.956Z","level":"info","message":"Quality check failed, regenerating Act III only (attempt 1/3)...","meta":{}}
+{"timestamp":"2026-03-13T12:05:13.957Z","level":"error","message":"Insufficient acts to regenerate Act III","meta":{}}
+{"timestamp":"2026-03-13T12:05:13.957Z","level":"error","message":"Insufficient acts to regenerate Act II and III","meta":{}}
+{"timestamp":"2026-03-13T12:05:13.957Z","level":"info","message":"Quality still not passing, regenerating Act II and III (attempt 1/3)...","meta":{}}
+{"timestamp":"2026-03-13T12:05:13.949Z","level":"info","message":"Step 9: Running retention scoring...","meta":{}}
+{"timestamp":"2026-03-13T12:06:40.233Z","level":"info","message":"Structure generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T12:06:40.237Z","level":"info","message":"Updated memory for novel mmou46g8xgl6btf3ued - Chapter 1","meta":{}}
+{"timestamp":"2026-03-13T12:06:40.241Z","level":"info","message":"Novel progress updated: mmou46g8xgl6btf3ued - Chapter 1","meta":{}}
+{"timestamp":"2026-03-13T12:06:40.242Z","level":"info","message":"Completed chapter generation for novel mmou46g8xgl6btf3ued - Chapter 1 (1391 words, 0 regeneration attempts)","meta":{}}
+{"timestamp":"2026-03-13T12:06:40.242Z","level":"info","message":"Metrics logged successfully","meta":{"chapter":1}}
+{"timestamp":"2026-03-13T12:10:56.560Z","level":"info","message":"Novel created: mmouv99i83t7ws526lv - Test Novel","meta":{}}
+{"timestamp":"2026-03-13T12:10:56.561Z","level":"info","message":"Novel created: mmouv99i83t7ws526lv - Test Novel","meta":{}}
+{"timestamp":"2026-03-13T12:12:11.205Z","level":"info","message":"Structure generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T12:12:11.208Z","level":"info","message":"Generated 4 arcs for novel mmouv99i83t7ws526lv","meta":{}}
+{"timestamp":"2026-03-13T12:12:11.218Z","level":"info","message":"Initialized memory for novel mmouv99i83t7ws526lv","meta":{}}
+{"timestamp":"2026-03-13T12:12:11.218Z","level":"info","message":"Starting genre-agnostic chapter generation pipeline for novel mmouv99i83t7ws526lv - Chapter 1 (Genre: Fantasy Academy, Target: 2200 words)","meta":{}}
+{"timestamp":"2026-03-13T12:12:11.218Z","level":"info","message":"Step 1: Generating escalation blueprint...","meta":{}}
+{"timestamp":"2026-03-13T12:13:27.997Z","level":"info","message":"Structure generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T12:13:27.998Z","level":"info","message":"Step 2: Generating 3-Act structured outline...","meta":{}}
+{"timestamp":"2026-03-13T12:15:28.907Z","level":"info","message":"Structure generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T12:15:28.908Z","level":"info","message":"Step 3: Generating Act I (Establishment)...","meta":{}}
+{"timestamp":"2026-03-13T12:18:09.392Z","level":"info","message":"Scene generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T12:18:09.393Z","level":"info","message":"Step 4: Generating Act II (Escalation)...","meta":{}}
+{"timestamp":"2026-03-13T12:21:01.247Z","level":"info","message":"Scene generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T12:21:01.247Z","level":"info","message":"Step 5: Generating Act III (Shift)...","meta":{}}
+{"timestamp":"2026-03-13T12:24:06.041Z","level":"info","message":"Scene generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T12:24:06.051Z","level":"info","message":"Step 6: Applying duplication detection...","meta":{}}
+{"timestamp":"2026-03-13T12:24:06.052Z","level":"warn","message":"Duplication detected: 9","meta":{"duplicateFound":true,"position":9,"similarTo":5}}
+{"timestamp":"2026-03-13T12:24:06.053Z","level":"info","message":"Step 8: Applying emotional enhancement to final 25%...","meta":{}}
+{"timestamp":"2026-03-13T12:24:06.052Z","level":"warn","message":"High similarity detected (>35%) between paragraphs at positions 5 and 9","meta":{}}
+{"timestamp":"2026-03-13T12:24:06.052Z","level":"info","message":"Step 7: Applying context continuity check...","meta":{}}
+{"timestamp":"2026-03-13T12:25:46.474Z","level":"warn","message":"Enhancement added too many paragraphs, using original content","meta":{}}
+{"timestamp":"2026-03-13T12:25:46.473Z","level":"info","message":"Emotional enhancement completed with llama3","meta":{}}
+{"timestamp":"2026-03-13T12:25:46.474Z","level":"info","message":"Step 9: Running retention scoring...","meta":{}}
+{"timestamp":"2026-03-13T12:25:46.481Z","level":"info","message":"Step 10: Validating escalation structure...","meta":{}}
+{"timestamp":"2026-03-13T12:25:46.481Z","level":"info","message":"Step 11: Checking quality and handling regeneration if needed...","meta":{}}
+{"timestamp":"2026-03-13T12:25:46.482Z","level":"info","message":"Quality check failed, regenerating Act III only (attempt 1/3)...","meta":{}}
+{"timestamp":"2026-03-13T12:25:46.482Z","level":"error","message":"Insufficient acts to regenerate Act III","meta":{}}
+{"timestamp":"2026-03-13T12:25:46.483Z","level":"info","message":"Quality still not passing, regenerating Act II and III (attempt 1/3)...","meta":{}}
+{"timestamp":"2026-03-13T12:25:46.483Z","level":"error","message":"Insufficient acts to regenerate Act II and III","meta":{}}
+{"timestamp":"2026-03-13T12:27:28.056Z","level":"info","message":"Structure generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T12:27:28.058Z","level":"info","message":"Updated memory for novel mmouv99i83t7ws526lv - Chapter 1","meta":{}}
+{"timestamp":"2026-03-13T12:27:28.063Z","level":"info","message":"Novel progress updated: mmouv99i83t7ws526lv - Chapter 1","meta":{}}
+{"timestamp":"2026-03-13T12:27:28.068Z","level":"info","message":"Metrics logged successfully","meta":{"chapter":1}}
+{"timestamp":"2026-03-13T12:27:28.068Z","level":"info","message":"Completed chapter generation for novel mmouv99i83t7ws526lv - Chapter 1 (1008 words, 0 regeneration attempts)","meta":{}}
+{"timestamp":"2026-03-13T16:02:43.519Z","level":"info","message":"Novel created: mmp35by56bj0m7ii4zv - Test Novel","meta":{}}
+{"timestamp":"2026-03-13T16:02:43.520Z","level":"info","message":"Novel created: mmp35by56bj0m7ii4zv - Test Novel","meta":{}}
+{"timestamp":"2026-03-13T16:04:23.546Z","level":"info","message":"Structure generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T16:04:23.547Z","level":"info","message":"Generated 4 arcs for novel mmp35by56bj0m7ii4zv","meta":{}}
+{"timestamp":"2026-03-13T16:04:23.554Z","level":"info","message":"Initialized memory for novel mmp35by56bj0m7ii4zv","meta":{}}
+{"timestamp":"2026-03-13T16:04:23.554Z","level":"info","message":"Starting genre-agnostic chapter generation pipeline for novel mmp35by56bj0m7ii4zv - Chapter 1 (Genre: Fantasy Academy, Target: 2200 words)","meta":{}}
+{"timestamp":"2026-03-13T16:04:23.555Z","level":"info","message":"Step 1: Generating escalation blueprint...","meta":{}}
+{"timestamp":"2026-03-13T16:05:15.242Z","level":"info","message":"Structure generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T16:05:15.243Z","level":"info","message":"Step 2: Generating 3-Act structured outline...","meta":{}}
+{"timestamp":"2026-03-13T16:17:48.125Z","level":"info","message":"Novel created: mmp3opy0u5q949ygnn - Test Novel","meta":{}}
+{"timestamp":"2026-03-13T16:17:48.125Z","level":"info","message":"Novel created: mmp3opy0u5q949ygnn - Test Novel","meta":{}}
+{"timestamp":"2026-03-13T16:19:08.472Z","level":"info","message":"Structure generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T16:19:08.475Z","level":"info","message":"Generated 4 arcs for novel mmp3opy0u5q949ygnn","meta":{}}
+{"timestamp":"2026-03-13T16:19:08.491Z","level":"info","message":"Initialized memory for novel mmp3opy0u5q949ygnn","meta":{}}
+{"timestamp":"2026-03-13T16:19:08.491Z","level":"info","message":"Starting genre-agnostic chapter generation pipeline for novel mmp3opy0u5q949ygnn - Chapter 1 (Genre: Fantasy Academy, Target: 2200 words)","meta":{}}
+{"timestamp":"2026-03-13T16:19:08.492Z","level":"info","message":"Step 1: Generating escalation blueprint...","meta":{}}
+{"timestamp":"2026-03-13T16:20:31.762Z","level":"info","message":"Structure generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T16:20:31.763Z","level":"info","message":"Step 2: Generating 3-Act structured outline...","meta":{}}
+{"timestamp":"2026-03-13T16:22:45.504Z","level":"info","message":"Structure generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T16:22:45.504Z","level":"info","message":"Step 3: Generating Act I (Establishment)...","meta":{}}
+{"timestamp":"2026-03-13T16:26:37.157Z","level":"info","message":"Scene generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T16:26:37.158Z","level":"info","message":"Step 4: Generating Act II (Escalation)...","meta":{}}
+{"timestamp":"2026-03-13T16:31:21.229Z","level":"info","message":"Scene generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T16:31:21.230Z","level":"info","message":"Step 5: Generating Act III (Shift)...","meta":{}}
+{"timestamp":"2026-03-13T16:36:00.172Z","level":"info","message":"Scene generation completed with qwen2.5:7b","meta":{}}
+{"timestamp":"2026-03-13T16:36:00.180Z","level":"info","message":"Step 5.5: Applying paragraph deduplication...","meta":{}}
+{"timestamp":"2026-03-13T16:36:00.189Z","level":"info","message":"Step 6: Applying duplication detection...","meta":{}}
+{"timestamp":"2026-03-13T16:36:00.190Z","level":"warn","message":"Continuity issues found:","meta":["Insufficient acts for continuity validation"]}
+{"timestamp":"2026-03-13T16:36:00.190Z","level":"info","message":"Step 7: Applying context continuity check...","meta":{}}
+{"timestamp":"2026-03-13T16:36:00.191Z","level":"error","message":"Failed to generate chapter 1 for novel mmp3opy0u5q949ygnn","meta":{"error":"this.emotionalAmplifier.amplify is not a function"}}
+{"timestamp":"2026-03-13T16:36:00.190Z","level":"info","message":"Step 8: Applying emotional enhancement to final 25%...","meta":{}}

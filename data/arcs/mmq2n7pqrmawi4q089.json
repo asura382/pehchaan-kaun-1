@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Humiliation",
+    "arcGoal": "Alex must confront his public humiliation and gain the support of his peers and teachers.",
+    "arcConflict": "Alex is publicly humiliated by the academy’s high-ranking students, leading to a loss of confidence and self-esteem. He struggles to find allies and support.",
+    "emotionalShift": "Alex goes from feeling helpless and degraded to beginning to stand up for himself and seeking friendship and mentorship.",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "Discovering Magic",
+    "arcGoal": "Alex uncovers his true magical potential and learns to control it, gaining the attention of the academy’s headmaster.",
+    "arcConflict": "Alex discovers a hidden talent for magic but struggles with the fear of being exposed as a fraud. He faces opposition from his former tormentors and the academy’s strict regulations on magic use.",
+    "emotionalShift": "Alex overcomes his fears and gains confidence in his abilities, leading to a stronger sense of self-worth and determination.",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "Rising Through Challenges",
+    "arcGoal": "Alex competes in the academy’s grand tournament and defeats his rivals, gaining respect and admiration from his peers and the faculty.",
+    "arcConflict": "Alex enters the grand tournament and faces intense competition and personal challenges, including dealing with the pressure of his past and the expectations of his new allies.",
+    "emotionalShift": "Alex experiences a significant boost in self-esteem and confidence as he overcomes his obstacles and wins the tournament, gaining a sense of belonging and respect.",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Final Showdown",
+    "arcGoal": "Alex confronts the source of his past humiliation and resolves the lingering conflict that has been affecting his growth.",
+    "arcConflict": "Alex faces his primary tormentor from the beginning of the story, leading to a climactic confrontation that tests his newfound abilities and resolve. The resolution involves a deep emotional and personal conflict that must be addressed for Alex to fully heal and grow.",
+    "emotionalShift": "Alex finds the strength to forgive and move past his past humiliations, leading to a sense of closure and personal triumph.",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Humiliation",
+    "arcGoal": "Alex survives the initial public humiliation and begins to understand the academy's harsh realities.",
+    "arcConflict": "Alex faces public shaming by higher-ranked students after a failed magic spell, leading to a loss of dignity and self-esteem.",
+    "emotionalShift": "Alex feels humiliated and alone, but learns resilience and starts to form unlikely alliances.",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Awakening",
+    "arcGoal": "Alex discovers their true potential and begins to challenge the status quo within the academy.",
+    "arcConflict": "Alex is given a task by a mysterious mentor that forces them to confront their inner strength and learn about the true nature of magic.",
+    "emotionalShift": "Alex begins to see beyond their circumstances, finds confidence, and starts to question the oppressive hierarchy.",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Ascent",
+    "arcGoal": "Alex gains allies, allies with those who share their vision for the academy, and prepares for a final confrontation with the corrupt leadership.",
+    "arcConflict": "Alex's growing influence attracts both friends and enemies, leading to a series of dangerous challenges and betrayals.",
+    "emotionalShift": "Alex's confidence grows, they form a group of like-minded students, and their resolve is tested by betrayal and fear.",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Triumph",
+    "arcGoal": "Alex leads a successful rebellion against the corrupt academy leadership, bringing about a new era of equality and justice.",
+    "arcConflict": "In a climactic confrontation, Alex must face the headmaster and their inner demons to bring about the change they seek.",
+    "emotionalShift": "Alex experiences a profound sense of accomplishment, but also the weight of leadership, as they navigate the challenges of building a new, fair academy.",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]

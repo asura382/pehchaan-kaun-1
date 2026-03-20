@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Humiliating Beginning",
+    "arcGoal": "Alex must overcome the initial setbacks and prove himself to his peers.",
+    "arcConflict": "Alex, a low-ranked student from a poor family, is publicly humiliated by his classmates for his lack of magical abilities. He struggles with self-doubt and faces significant pressure to conform to the academy's expectations.",
+    "emotionalShift": "From shame and despair to determination and resilience as Alex begins to form unlikely friendships and seeks out allies within the academy.",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Path of Shadows",
+    "arcGoal": "Alex discovers an underground network that offers him a way to gain power and resources, even if it means bending his moral code slightly.",
+    "arcConflict": "Alex learns about a secret society within the academy that uses dark magic for personal gain. He is tempted by their offer but must decide whether to trust them or risk everything he has built so far.",
+    "emotionalShift": "From distrust and fear to internal conflict and eventual acceptance of an uneasy alliance, Alex navigates his new position with caution while still striving for redemption and honor.",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Rise in Shadows",
+    "arcGoal": "Alex uses the power he gained from the secret society to climb the ranks of the academy hierarchy, all while keeping his true motives hidden.",
+    "arcConflict": "As Alex rises through the ranks, he faces increasing pressure to make difficult decisions that test his loyalty and integrity. His allies and enemies alike become more suspicious, leading to a series of close calls and near betrayals.",
+    "emotionalShift": "From cautious optimism to deep internal conflict and moral ambiguity as Alex grapples with the consequences of his actions and the price he must pay for success.",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Final Stand",
+    "arcGoal": "Alex confronts the true extent of his power and faces a climactic battle against those who threaten to expose him, ultimately choosing redemption over revenge.",
+    "arcConflict": "In the final chapters, Alex's secret is about to be revealed. He must decide whether to embrace his newfound position or risk everything to clear his name and right the wrongs he has committed in pursuit of power. The academy is on the brink of chaos as powerful forces clash, leading to a decisive confrontation.",
+    "emotionalShift": "From desperation and manipulation to ultimate triumph and self-realization as Alex chooses forgiveness over vengeance, resolving to use his power for good despite the challenges that lie ahead.",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]

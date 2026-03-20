@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Humiliation",
+    "arcGoal": "Alex must survive his first day at the Academy and gain the respect of his peers and teachers.",
+    "arcConflict": "Alex is publicly humiliated by a powerful student, forcing him to confront his own limitations and fear of failure.",
+    "emotionalShift": "Alex experiences a mix of humiliation, anger, and determination, vowing to rise above his circumstances.",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Apprenticeship",
+    "arcGoal": "Alex seeks redemption and a chance to prove himself by becoming a respected apprentice to a powerful teacher.",
+    "arcConflict": "Alex is assigned to an unassuming teacher who seems unlikely to help him, but Alex must navigate the politics of the Academy to gain their support.",
+    "emotionalShift": "Alex learns the importance of resilience and hard work, slowly gaining confidence and respect among his peers.",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Challenge",
+    "arcGoal": "Alex faces a critical challenge that tests his skills and character, bringing him closer to his ultimate goal.",
+    "arcConflict": "Alex is tasked with a dangerous mission that threatens to expose his true abilities and place him in peril, forcing him to make a difficult choice.",
+    "emotionalShift": "Alex experiences a surge of courage and self-belief, realizing his potential and the importance of his role in the Academy's hierarchy.",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Triumph",
+    "arcGoal": "Alex achieves his ultimate goal, gaining recognition and respect from the Academy and the power to shape his own destiny.",
+    "arcConflict": "Alex must confront the ultimate test of his resolve, a final battle against a powerful enemy who seeks to destroy everything he has worked for.",
+    "emotionalShift": "Alex experiences a profound sense of accomplishment and pride, having overcome his initial humiliation and risen to power.",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]

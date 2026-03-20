@@ -1,0 +1,117 @@
+{"timestamp":"2026-02-24T04:57:13.878Z","level":"info","message":"Server started","meta":{"port":3000}}
+{"timestamp":"2026-02-24T04:59:17.489Z","level":"info","message":"Server started","meta":{"port":3000}}
+{"timestamp":"2026-02-24T04:59:33.527Z","level":"info","message":"Server started","meta":{"port":3000}}
+{"timestamp":"2026-02-24T05:00:05.464Z","level":"info","message":"Server started","meta":{"port":3000}}
+{"timestamp":"2026-02-24T05:00:30.106Z","level":"info","message":"Server started","meta":{"port":3000}}
+{"timestamp":"2026-02-24T05:00:51.723Z","level":"info","message":"Novel created: mm050ospa4uy5er2wgp - The Last Dragon Keeper","meta":{}}
+{"timestamp":"2026-02-24T05:01:21.769Z","level":"warn","message":"Attempt 1 failed for llama3 structure generation:","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T05:01:52.796Z","level":"warn","message":"Attempt 2 failed for llama3 structure generation:","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T05:02:24.809Z","level":"warn","message":"Attempt 3 failed for llama3 structure generation:","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T05:02:24.810Z","level":"error","message":"All 3 attempts failed for llama3 structure generation","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T05:02:24.810Z","level":"error","message":"Failed to generate structure with llama3","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T05:02:24.812Z","level":"error","message":"Novel initialization failed","meta":{"error":"Arc generation failed: Structure generation failed: timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T05:02:24.811Z","level":"error","message":"Failed to generate arcs for novel mm050ospa4uy5er2wgp","meta":{"error":"Structure generation failed: timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T05:03:06.368Z","level":"info","message":"Novel created: mm053kovcpdfg6wtlrf - The Last Dragon Keeper","meta":{}}
+{"timestamp":"2026-02-24T05:03:36.372Z","level":"warn","message":"Attempt 1 failed for llama3 structure generation:","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T05:04:07.388Z","level":"warn","message":"Attempt 2 failed for llama3 structure generation:","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T05:04:39.407Z","level":"warn","message":"Attempt 3 failed for llama3 structure generation:","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T05:04:39.407Z","level":"error","message":"All 3 attempts failed for llama3 structure generation","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T05:04:39.408Z","level":"error","message":"Failed to generate structure with llama3","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T05:04:39.408Z","level":"error","message":"Novel initialization failed","meta":{"error":"Arc generation failed: Structure generation failed: timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T05:04:39.408Z","level":"error","message":"Failed to generate arcs for novel mm053kovcpdfg6wtlrf","meta":{"error":"Structure generation failed: timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T09:45:07.642Z","level":"info","message":"Novel created: mm0f6986ip7w6j668ir - Echoes of the Devoured","meta":{}}
+{"timestamp":"2026-02-24T09:45:37.662Z","level":"warn","message":"Attempt 1 failed for llama3 structure generation:","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T09:46:08.701Z","level":"warn","message":"Attempt 2 failed for llama3 structure generation:","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T09:46:40.724Z","level":"warn","message":"Attempt 3 failed for llama3 structure generation:","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T09:46:40.725Z","level":"error","message":"All 3 attempts failed for llama3 structure generation","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T09:46:40.725Z","level":"error","message":"Failed to generate structure with llama3","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T09:46:40.726Z","level":"error","message":"Failed to generate arcs for novel mm0f6986ip7w6j668ir","meta":{"error":"Structure generation failed: timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T09:46:40.726Z","level":"error","message":"Novel initialization failed","meta":{"error":"Arc generation failed: Structure generation failed: timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T09:55:18.074Z","level":"info","message":"Novel created: mm0fjc8pj1yk5o07rd - Echoes of the Devoured","meta":{}}
+{"timestamp":"2026-02-24T09:55:48.093Z","level":"warn","message":"Attempt 1 failed for llama3 structure generation:","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T09:56:19.129Z","level":"warn","message":"Attempt 2 failed for llama3 structure generation:","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T09:56:51.142Z","level":"warn","message":"Attempt 3 failed for llama3 structure generation:","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T09:56:51.143Z","level":"error","message":"All 3 attempts failed for llama3 structure generation","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T09:56:51.143Z","level":"error","message":"Failed to generate structure with llama3","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T09:56:51.144Z","level":"error","message":"Novel initialization failed","meta":{"error":"Arc generation failed: Structure generation failed: timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T09:56:51.144Z","level":"error","message":"Failed to generate arcs for novel mm0fjc8pj1yk5o07rd","meta":{"error":"Structure generation failed: timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T10:06:32.028Z","level":"info","message":"Novel created: mm0fxs9n47lhm821v9s - Echoes of the Devoured","meta":{}}
+{"timestamp":"2026-02-24T10:07:02.047Z","level":"warn","message":"Attempt 1 failed for llama3 structure generation:","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T10:07:33.070Z","level":"warn","message":"Attempt 2 failed for llama3 structure generation:","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T10:08:05.087Z","level":"warn","message":"Attempt 3 failed for llama3 structure generation:","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T10:08:05.088Z","level":"error","message":"All 3 attempts failed for llama3 structure generation","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T10:08:05.088Z","level":"error","message":"Failed to generate structure with llama3","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T10:08:05.089Z","level":"error","message":"Failed to generate arcs for novel mm0fxs9n47lhm821v9s","meta":{"error":"Structure generation failed: timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T10:08:05.089Z","level":"error","message":"Novel initialization failed","meta":{"error":"Arc generation failed: Structure generation failed: timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T10:12:51.617Z","level":"info","message":"Novel created: mm0g5x5rppjjq6ditr - Echoes of the Devoured","meta":{}}
+{"timestamp":"2026-02-24T10:13:21.636Z","level":"warn","message":"Attempt 1 failed for llama3 structure generation:","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T10:13:52.655Z","level":"warn","message":"Attempt 2 failed for llama3 structure generation:","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T10:14:24.675Z","level":"warn","message":"Attempt 3 failed for llama3 structure generation:","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T10:14:24.675Z","level":"error","message":"All 3 attempts failed for llama3 structure generation","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T10:14:24.676Z","level":"error","message":"Failed to generate structure with llama3","meta":{"error":"timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T10:14:24.676Z","level":"error","message":"Novel initialization failed","meta":{"error":"Arc generation failed: Structure generation failed: timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T10:14:24.676Z","level":"error","message":"Failed to generate arcs for novel mm0g5x5rppjjq6ditr","meta":{"error":"Structure generation failed: timeout of 30000ms exceeded"}}
+{"timestamp":"2026-02-24T12:15:53.147Z","level":"info","message":"Server started","meta":{"port":3000}}
+{"timestamp":"2026-02-24T12:16:40.639Z","level":"info","message":"Novel created: mm0kl5ffred3jc4h9ma - Echoes of the Devoured","meta":{}}
+{"timestamp":"2026-02-24T12:18:14.696Z","level":"info","message":"Structure generation completed with llama3","meta":{}}
+{"timestamp":"2026-02-24T12:18:14.697Z","level":"info","message":"Generated 4 arcs for novel mm0kl5ffred3jc4h9ma","meta":{}}
+{"timestamp":"2026-02-24T12:18:14.698Z","level":"info","message":"Initialized memory for novel mm0kl5ffred3jc4h9ma","meta":{}}
+{"timestamp":"2026-02-24T12:18:14.699Z","level":"info","message":"Novel initialized: mm0kl5ffred3jc4h9ma - Echoes of the Devoured","meta":{}}
+{"timestamp":"2026-02-24T12:20:23.391Z","level":"info","message":"Structure generation completed with llama3","meta":{}}
+{"timestamp":"2026-02-24T12:20:23.392Z","level":"info","message":"Generated intent for novel mm0kl5ffred3jc4h9ma - Chapter 1","meta":{}}
+{"timestamp":"2026-02-24T12:23:15.215Z","level":"info","message":"Prose generation completed with mistral","meta":{}}
+{"timestamp":"2026-02-24T12:24:10.154Z","level":"info","message":"Structure generation completed with llama3","meta":{}}
+{"timestamp":"2026-02-24T12:24:10.156Z","level":"info","message":"Updated memory for novel mm0kl5ffred3jc4h9ma - Chapter 1","meta":{}}
+{"timestamp":"2026-02-24T12:24:10.160Z","level":"info","message":"Novel progress updated: mm0kl5ffred3jc4h9ma - Chapter 1","meta":{}}
+{"timestamp":"2026-02-24T12:24:10.161Z","level":"info","message":"Generated chapter 1 for novel mm0kl5ffred3jc4h9ma","meta":{}}
+{"timestamp":"2026-02-24T13:39:30.202Z","level":"info","message":"Server started","meta":{"port":3000}}
+{"timestamp":"2026-02-24T13:58:08.474Z","level":"info","message":"Starting retention evaluation for scene","meta":{}}
+{"timestamp":"2026-02-24T13:58:08.553Z","level":"warn","message":"Attempt 1 failed for qwen2.5 structure generation:","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:09.572Z","level":"warn","message":"Attempt 2 failed for qwen2.5 structure generation:","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:11.596Z","level":"warn","message":"Attempt 3 failed for qwen2.5 structure generation:","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:11.597Z","level":"error","message":"All 3 attempts failed for qwen2.5 structure generation","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:11.597Z","level":"error","message":"Failed to generate structure with qwen2.5","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:11.598Z","level":"info","message":"Scene failed retention criteria, initiating rewrite","meta":{}}
+{"timestamp":"2026-02-24T13:58:11.598Z","level":"info","message":"Retention check result","meta":{"dialoguePercent":40,"tension":5,"escalation":"No","shouldRewrite":true}}
+{"timestamp":"2026-02-24T13:58:11.597Z","level":"error","message":"Retention evaluation failed","meta":{"error":"Structure generation failed: Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:11.604Z","level":"warn","message":"Attempt 1 failed for qwen2.5 structure generation:","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:12.620Z","level":"warn","message":"Attempt 2 failed for qwen2.5 structure generation:","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:14.642Z","level":"warn","message":"Attempt 3 failed for qwen2.5 structure generation:","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:14.642Z","level":"error","message":"All 3 attempts failed for qwen2.5 structure generation","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:14.642Z","level":"error","message":"Failed to generate structure with qwen2.5","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:14.643Z","level":"error","message":"Scene rewrite failed on attempt 1","meta":{"error":"Structure generation failed: Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:14.654Z","level":"warn","message":"Attempt 1 failed for qwen2.5 structure generation:","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:15.673Z","level":"warn","message":"Attempt 2 failed for qwen2.5 structure generation:","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:17.700Z","level":"warn","message":"Attempt 3 failed for qwen2.5 structure generation:","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:17.701Z","level":"error","message":"All 3 attempts failed for qwen2.5 structure generation","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:17.701Z","level":"error","message":"Failed to generate structure with qwen2.5","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:17.702Z","level":"error","message":"Retention evaluation failed","meta":{"error":"Structure generation failed: Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:17.707Z","level":"info","message":"Starting retention evaluation for scene","meta":{}}
+{"timestamp":"2026-02-24T13:58:17.702Z","level":"info","message":"Retention check result","meta":{"dialoguePercent":40,"tension":5,"escalation":"No","shouldRewrite":true}}
+{"timestamp":"2026-02-24T13:58:17.703Z","level":"warn","message":"Scene still failing retention after rewrite, using best version","meta":{}}
+{"timestamp":"2026-02-24T13:58:17.719Z","level":"warn","message":"Attempt 1 failed for qwen2.5 structure generation:","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:18.743Z","level":"warn","message":"Attempt 2 failed for qwen2.5 structure generation:","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:20.767Z","level":"warn","message":"Attempt 3 failed for qwen2.5 structure generation:","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:20.769Z","level":"error","message":"All 3 attempts failed for qwen2.5 structure generation","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:20.770Z","level":"error","message":"Failed to generate structure with qwen2.5","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:20.771Z","level":"info","message":"Retention check result","meta":{"dialoguePercent":40,"tension":5,"escalation":"No","shouldRewrite":true}}
+{"timestamp":"2026-02-24T13:58:20.770Z","level":"error","message":"Retention evaluation failed","meta":{"error":"Structure generation failed: Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:20.771Z","level":"info","message":"Scene failed retention criteria, initiating rewrite","meta":{}}
+{"timestamp":"2026-02-24T13:58:20.780Z","level":"warn","message":"Attempt 1 failed for qwen2.5 structure generation:","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:21.811Z","level":"warn","message":"Attempt 2 failed for qwen2.5 structure generation:","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:23.830Z","level":"warn","message":"Attempt 3 failed for qwen2.5 structure generation:","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:23.830Z","level":"error","message":"All 3 attempts failed for qwen2.5 structure generation","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:23.831Z","level":"error","message":"Failed to generate structure with qwen2.5","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:23.831Z","level":"error","message":"Scene rewrite failed on attempt 1","meta":{"error":"Structure generation failed: Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:23.840Z","level":"warn","message":"Attempt 1 failed for qwen2.5 structure generation:","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:24.850Z","level":"warn","message":"Attempt 2 failed for qwen2.5 structure generation:","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:26.867Z","level":"warn","message":"Attempt 3 failed for qwen2.5 structure generation:","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:26.867Z","level":"error","message":"All 3 attempts failed for qwen2.5 structure generation","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:26.868Z","level":"error","message":"Retention evaluation failed","meta":{"error":"Structure generation failed: Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:26.868Z","level":"info","message":"Retention check result","meta":{"dialoguePercent":40,"tension":5,"escalation":"No","shouldRewrite":true}}
+{"timestamp":"2026-02-24T13:58:26.867Z","level":"error","message":"Failed to generate structure with qwen2.5","meta":{"error":"Request failed with status code 404"}}
+{"timestamp":"2026-02-24T13:58:26.869Z","level":"warn","message":"Scene still failing retention after rewrite, using best version","meta":{}}
+{"timestamp":"2026-02-24T16:08:27.168Z","level":"info","message":"Novel created: mm0sv7rxz07ahdi56c - Test Novel","meta":{}}
+{"timestamp":"2026-02-24T16:08:27.171Z","level":"error","message":"Failed to generate chapter undefined for novel mm0sv7rxz07ahdi56c","meta":{"error":"No arc found for chapter undefined"}}
+{"timestamp":"2026-02-24T16:08:27.170Z","level":"error","message":"Failed to get current arc for novel mm0sv7rxz07ahdi56c","meta":{"error":"No arc found for chapter undefined"}}
+{"timestamp":"2026-02-24T16:17:31.699Z","level":"info","message":"Novel created: mm0t6vxp0lhkf4gp9iii - Test Novel","meta":{}}

@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Humiliation",
+    "arcGoal": "Alex must endure the public shaming and gather strength for the challenges ahead.",
+    "arcConflict": "Alex is forced to participate in a humiliating public challenge by the academy’s elite, leading to a crisis of confidence and a loss of dignity.",
+    "emotionalShift": "Alex experiences intense shame and despair, but also starts to uncover hidden allies and the true nature of the academy’s hierarchy.",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Awakening",
+    "arcGoal": "Alex begins to embrace their magical abilities and starts to strategize against the academy’s oppressive system.",
+    "arcConflict": "Alex discovers they possess a rare and powerful magical ability, which sets them on a path of rebellion against the academy’s oppressive rules.",
+    "emotionalShift": "Alex transitions from fear and despair to determination and a sense of purpose, forming bonds with other outcasts and forming a small resistance group.",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Betrayal",
+    "arcGoal": "Alex must navigate a dangerous alliance and uncover a conspiracy within the academy.",
+    "arcConflict": "Alex is betrayed by a trusted ally and faces a new challenge: prove their worth to the academy’s leadership or face severe consequences.",
+    "emotionalShift": "Alex experiences the harsh reality of loyalty and betrayal, but also finds unexpected strength in their resilience and the support of their allies.",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Triumph",
+    "arcGoal": "Alex leads the final rebellion and exposes the academy’s corrupt leadership to the public.",
+    "arcConflict": "Alex must confront the academy’s corrupt leadership and rally the student body to their cause, facing significant obstacles and personal sacrifices.",
+    "emotionalShift": "Alex’s resolve is tested but ultimately fulfilled as they lead a successful rebellion, exposing the corruption and achieving a semblance of justice and power for the marginalized students.",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]

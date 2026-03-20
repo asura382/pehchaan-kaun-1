@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Humiliation",
+    "arcGoal": "Alex must endure the initial public humiliation and find strength within.",
+    "arcConflict": "Alex is publicly humiliated by the academy's elite for not completing a mandatory magic assignment, leading to social ostracization and self-doubt.",
+    "emotionalShift": "Alex learns the value of resilience and starts to question the academy's rigid hierarchy.",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "Seeking Redemption",
+    "arcGoal": "Alex seeks to prove their worth and begins to uncover the academy's hidden injustices.",
+    "arcConflict": "Alex is tasked with a dangerous mission to retrieve a lost artifact, but the mission is sabotaged by the academy's elite, forcing Alex to rely on new allies.",
+    "emotionalShift": "Alex forms unlikely bonds with peers and mentors, gaining confidence and a sense of belonging.",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "Rising to Power",
+    "arcGoal": "Alex uses their newfound allies and knowledge to challenge the academy's corrupt leadership and gain recognition.",
+    "arcConflict": "Alex faces resistance from the academy's elite and must navigate political intrigue to expose corruption and gain allies among the staff.",
+    "emotionalShift": "Alex's self-worth and determination grow, leading to a confrontation with the corrupt headmaster.",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Final Stand",
+    "arcGoal": "Alex and their allies confront the corrupt headmaster and bring about a change in the academy's governance.",
+    "arcConflict": "The headmaster, seeking to maintain their power, launches a final, desperate attack on Alex and their allies, leading to a climactic battle for control of the academy.",
+    "emotionalShift": "Alex emerges victorious, leading to a new era of transparency and equality in the academy.",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]

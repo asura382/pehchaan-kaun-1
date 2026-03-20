@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Humiliating Reveal",
+    "arcGoal": "Alex must confront the humiliation and begin to uncover the truth about their situation.",
+    "arcConflict": "Alex faces public shaming and exclusion from the academy's elite, sparking their resolve to rise.",
+    "emotionalShift": "Alex goes from feeling isolated and defeated to finding a secret mentor and developing a hidden strength.",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "Learning the Secrets",
+    "arcGoal": "Alex seeks to master forbidden knowledge and gain allies to counteract the academy hierarchy.",
+    "arcConflict": "Alex encounters strict professors and powerful students who threaten their newfound knowledge and friendships.",
+    "emotionalShift": "Alex transitions from fear and doubt to confidence and determination, forming a close-knit group of allies.",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Hidden Power Unleashed",
+    "arcGoal": "Alex faces a direct challenge to their power and must defend their new found allies and self.",
+    "arcConflict": "The academy hierarchy retaliates against Alex’s growing influence, leading to a climactic battle for supremacy.",
+    "emotionalShift": "Alex overcomes their initial hesitation and fear, embracing their power and facing the ultimate test of their resolve.",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "Rising to the Top",
+    "arcGoal": "Alex triumphs over the academy hierarchy, establishing their rightful place as a powerful figure in the academy.",
+    "arcConflict": "Alex confronts the final challenge from the academy’s most powerful students and must make a choice that will change their life forever.",
+    "emotionalShift": "Alex experiences a mix of elation and lingering doubt, as they reflect on their journey and the cost of their success.",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]

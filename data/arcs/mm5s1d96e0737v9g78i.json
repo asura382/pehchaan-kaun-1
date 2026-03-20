@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Humiliation",
+    "arcGoal": "Alex must navigate the harsh realities of academy life and find a way to prove themselves despite their low rank.",
+    "arcConflict": "Public humiliation, exclusion from important classes, and struggles with basic needs like food and supplies.",
+    "emotionalShift": "From despair and self-doubt to determination and resilience as Alex begins to uncover hidden talents and allies.",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Discovery",
+    "arcGoal": "Alex uncovers a mysterious book that hints at forbidden knowledge, which could be the key to their rise in status.",
+    "arcConflict": "Internal conflict between pursuing the knowledge and risking severe punishment from the academy for unauthorized magic use.",
+    "emotionalShift": "From curiosity and excitement to fear and determination as Alex decides to take the risk of uncovering the truth.",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Betrayal",
+    "arcGoal": "Alex forms a bond with a student from a higher rank, who helps them gain access to important resources and knowledge.",
+    "arcConflict": "The alliance turns sour when the higher-ranked student betrays Alex for personal gain, leading to a crisis of trust.",
+    "emotionalShift": "From reliance on others to isolation and internal strength as Alex must overcome betrayal and continue their journey alone.",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Triumph",
+    "arcGoal": "Alex uses the knowledge from the mysterious book to master a powerful spell, allowing them to confront the academy's corrupt leadership and secure their rightful place.",
+    "arcConflict": "Facing the consequences of using forbidden magic and the challenge of challenging authority within the strict hierarchy.",
+    "emotionalShift": "From fear and uncertainty to confidence and power as Alex achieves both personal triumph and justice for the academy's oppressed students.",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]

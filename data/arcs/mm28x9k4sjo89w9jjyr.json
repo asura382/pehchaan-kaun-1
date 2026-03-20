@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Humiliation",
+    "arcGoal": "Alex must survive the initial public humiliation and gain support from allies.",
+    "arcConflict": "Alex is publicly embarrassed for a minor rule violation, leading to ridicule from peers and suspicion from faculty. He struggles with self-doubt but finds unexpected support from a fellow student named Lyra.",
+    "emotionalShift": "From despair and isolation to hope and tentative alliances",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Reckoning",
+    "arcGoal": "Alex confronts the source of his humiliation and begins uncovering a conspiracy within the academy.",
+    "arcConflict": "Alex discovers that the incident was orchestrated by a powerful student, Zephyr, who seeks to eliminate competition for the prestigious Order of Shadows. Alex must navigate through dangerous secrets while facing increasing threats from Zephyr's enforcers.",
+    "emotionalShift": "From cautious optimism to heightened danger and determination",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Rise",
+    "arcGoal": "Alex uses his newfound knowledge to gather allies and prepare for a final confrontation with Zephyr.",
+    "arcConflict": "Alex forms an alliance with Lyra and other students, but faces challenges in unifying them. He must also master forbidden magic to have any chance against the formidable Zephyr. The academy's authorities, sensing trouble, attempt to suppress Alex's growing power.",
+    "emotionalShift": "From fragmented hope to a unified front and rising confidence",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Climax",
+    "arcGoal": "Alex faces off against Zephyr in an epic battle for the Order of Shadows.",
+    "arcConflict": "In a climactic showdown, Alex must use all his resources and newfound allies to overcome Zephyr. The fate of the academy hangs in the balance as he confronts not only Zephyr but also the corrupt faculty who have turned a blind eye to his torment. Alex's personal growth is put to the ultimate test.",
+    "emotionalShift": "From intense struggle to triumph and redemption",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]

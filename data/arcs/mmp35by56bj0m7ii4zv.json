@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Shadow of Humiliation",
+    "arcGoal": "Alex seeks to clear his name after a false accusation of cheating during a major exam.",
+    "arcConflict": "Alex faces public humiliation and loss of scholarship, putting immense pressure on him to prove his innocence.",
+    "emotionalShift": "Alex goes from feeling ostracized and desperate to a resolve to confront the accusers and seek justice.",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "Rising Above Adversity",
+    "arcGoal": "Alex works tirelessly to excel in his studies and gain the respect of his peers and teachers.",
+    "arcConflict": "Despite his hard work, Alex continues to face obstacles and the skepticism of his peers, who believe he is just lucky.",
+    "emotionalShift": "Alex transitions from being a target of ridicule to gaining respect, but his journey is far from over.",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Great Divide",
+    "arcGoal": "Alex and his newfound allies challenge the corrupt headmaster's policies in a public debate, aiming to expose the misuse of power and corruption within the academy.",
+    "arcConflict": "Alex and his allies are forced to navigate a web of political intrigue and personal threats from those in power who wish to maintain the status quo.",
+    "emotionalShift": "Alex learns the true extent of corruption and begins to question his own role in the academy's structure, leading to a personal crisis.",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "Revolutions and Revelations",
+    "arcGoal": "Alex leads a rebellion to expose the corrupt practices of the academy, seeking to create a fair and just system where magic is used for the betterment of all students.",
+    "arcConflict": "The rebellion faces fierce opposition, leading to a tense climax where Alex must make difficult choices and confront his own limitations.",
+    "emotionalShift": "Alex ultimately triumphs over his inner doubts, leading to a profound transformation and the establishment of a new, more equitable system within the academy.",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Humiliation",
+    "arcGoal": "Alex must confront the public humiliation and begin to rebuild his confidence.",
+    "arcConflict": "Alex is publicly humiliated by his peers for a minor mistake in class, leading him to question his place at the academy.",
+    "emotionalShift": "From despair and self-doubt, Alex starts to find small victories that boost his morale.",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Awakening",
+    "arcGoal": "Alex discovers his true potential through a series of challenges designed by the academy.",
+    "arcConflict": "Despite initial setbacks, Alex faces a series of tests that reveal hidden strengths and weaknesses.",
+    "emotionalShift": "From confusion and frustration, Alex starts to find a sense of purpose in his abilities and begins to challenge the status quo.",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Alliance",
+    "arcGoal": "Alex forms alliances with other students to support each other against the oppressive academy hierarchy.",
+    "arcConflict": "Alex must navigate complex relationships and rivalries among his peers while working to unite them for a common cause.",
+    "emotionalShift": "From isolation, Alex experiences camaraderie and begins to see himself as part of something greater than just an individual student.",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Climax",
+    "arcGoal": "Alex leads a rebellion against the academy's oppressive leadership, seeking justice for all students.",
+    "arcConflict": "Facing the full wrath of the academy’s hierarchy, Alex and his allies must battle both magical and political adversaries to achieve their goals.",
+    "emotionalShift": "From fear and uncertainty, Alex faces intense conflict but emerges stronger, leading to a triumph that changes the academy forever.",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "arcTitle": "The Humiliation Begins",
+    "arcGoal": "Alex seeks to prove his worth despite the public humiliation he faces.",
+    "arcConflict": "Alex is publicly humiliated by a powerful student, leading him to question his place in the academy and his own abilities.",
+    "emotionalShift": "From despair and self-doubt, Alex finds a small spark of determination.",
+    "startChapter": 1,
+    "endChapter": 5,
+    "currentChapter": 1,
+    "completed": false
+  },
+  {
+    "arcTitle": "Finding Allies",
+    "arcGoal": "Alex builds alliances to support his rise in the academy's hierarchy.",
+    "arcConflict": "Alex must navigate the treacherous politics of the academy, facing betrayal and skepticism from potential allies.",
+    "emotionalShift": "Alex learns trust is hard-earned but essential, building a network of loyal friends.",
+    "startChapter": 6,
+    "endChapter": 10,
+    "currentChapter": 6,
+    "completed": false
+  },
+  {
+    "arcTitle": "Mastering Magic",
+    "arcGoal": "Alex seeks to improve his magical abilities and prove himself to the academy’s powerful figures.",
+    "arcConflict": "Despite his efforts, Alex struggles with mastering magic, facing doubts from peers and teachers alike.",
+    "emotionalShift": "Alex discovers hidden potential within himself and becomes determined to unlock it, gaining confidence in his own abilities.",
+    "startChapter": 11,
+    "endChapter": 15,
+    "currentChapter": 11,
+    "completed": false
+  },
+  {
+    "arcTitle": "The Final Showdown",
+    "arcGoal": "Alex confronts the student who humiliated him and seeks redemption for all he has endured.",
+    "arcConflict": "In a dramatic confrontation, Alex must use everything he’s learned to rise above his past and claim his rightful place in the academy.",
+    "emotionalShift": "From pain and anger, Alex transforms into a confident and respected leader, ready to face any future challenges head-on.",
+    "startChapter": 16,
+    "endChapter": 20,
+    "currentChapter": 16,
+    "completed": false
+  }
+]
