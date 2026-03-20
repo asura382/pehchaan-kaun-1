@@ -1,141 +1,122 @@
 # Pehchaan Kaun? 🇮🇳
 
-A daily Indian GK guessing game built with Next.js - similar to Wordle but focused on Indian personalities, things, and culture.
+**Daily Indian General Knowledge Puzzle Game**
 
-## Features
+Test your Indian general knowledge with daily puzzles inspired by Wordle. Guess the personality, place, or thing before using all clues!
 
-- **Daily Puzzle**: Same puzzle for everyone globally, changes at local midnight
-- **35 Puzzles**: Covering cricketers, actors, freedom fighters, scientists, IPL teams, and more
-- **Smart Guess Validation**: Case-insensitive, partial matching, first-letter hints
-- **Streak Tracking**: Current and max streak using localStorage
-- **Share Cards**: Beautiful result cards with PNG download and WhatsApp sharing
-- **Responsive Design**: Works perfectly on mobile and desktop
+## 🎮 How to Play
 
-## Tech Stack
+1. **One puzzle per day** - Available at midnight in your local timezone
+2. **Up to 5 clues** - Revealed one at a time
+3. **Guess the answer** - Type your guess and submit
+4. **Score system** - Fewer clues used = better score
+5. **Track your streak** - Play daily to build and maintain streaks
 
-- **Next.js 15** - React framework
-- **TypeScript** - Type safety
-- **html-to-image** - Share card generation
-- **canvas-confetti** - Celebration effects
-- **localStorage** - Stats persistence
+## 🚀 Features
 
-## Getting Started
+- ✅ Daily Indian GK puzzles (personalities, culture, institutions)
+- ✅ Progressive clue reveal system
+- ✅ Streak tracking with localStorage
+- ✅ Beautiful share cards with roasts/celebrations
+- ✅ Mobile-first responsive design
+- ✅ Offline support with Service Workers
+- ✅ High-performance Next.js architecture
 
-### Installation
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 16.2.0 (App Router)
+- **Language:** TypeScript
+- **Styling:** CSS with mobile-first approach
+- **Dependencies:**
+  - React 19.2.4
+  - canvas-confetti (for celebrations)
+  - html-to-image (for share cards)
+
+## 📦 Installation
 
 ```bash
+# Install dependencies
 npm install
-```
 
-### Development
-
-```bash
+# Run development server
 npm run dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Build
-
-```bash
+# Build for production
 npm run build
+
+# Start production server
 npm start
 ```
 
-## Game Rules
-
-1. You get one puzzle per day
-2. Clues are revealed one by one (maximum 5)
-3. Guess after each clue
-4. Fewer clues = better score
-5. Wrong guesses shake red, then show next clue after 2.5 seconds
-6. Correct guess triggers confetti celebration
-7. Share your result card!
-
-## Project Structure
+## 🎯 Project Structure
 
 ```
-pehchaan-kaun/
-├── app/
-│   ├── page.tsx          # Main game component
-│   ├── layout.tsx        # Root layout
-│   └── globals.css       # Global styles
-├── components/
-│   └── ResultCard.tsx    # Share card component
-├── data/
-│   └── puzzles.ts        # All 35 puzzles
-├── lib/
-│   ├── gameUtils.ts      # Game logic helpers
-│   └── statsUtils.ts     # localStorage helpers
-└── package.json
+pehchan-kaun/
+├── app/                    # Next.js App Router
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Main game page
+├── components/            # Reusable React components
+│   └── ResultCard.tsx     # Share result card component
+├── data/                  # Game data
+│   └── puzzles.ts         # Daily puzzle database
+├── lib/                   # Utility functions
+│   ├── gameUtils.ts       # Game logic utilities
+│   └── statsUtils.ts      # Statistics tracking
+├── package.json
+├── tsconfig.json
+└── next.config.js
 ```
 
-## Puzzle Examples
+## 🎨 Game Mechanics
 
-### Sachin Tendulkar (Indian Cricketer)
-- I have played more than 200 Test matches
-- I am from Mumbai
-- I made my debut at age 16
-- I scored 100 international centuries
-- They call me the God of Cricket
+### Scoring System
+- **1 clue:** 5 points ⭐⭐⭐⭐⭐
+- **2 clues:** 4 points ⭐⭐⭐⭐
+- **3 clues:** 3 points ⭐⭐⭐
+- **4 clues:** 2 points ⭐⭐
+- **5 clues:** 1 point ⭐
 
-### Shah Rukh Khan (Bollywood Actor)
-- I started my career on television
-- I was born in New Delhi
-- I own an IPL team
-- I am known as the King of Romance
-- My initials are SRK
+### Statistics Tracked
+- Current streak
+- Maximum streak
+- Total games played
+- Total games won
+- Last played date
 
-## How Puzzles Work
+## 🌐 Deployment
 
-The daily puzzle is calculated using:
+The app is optimized for deployment on Vercel:
 
-```typescript
-const localDay = Math.floor(
-  (now.getTime() - now.getTimezoneOffset() * 60000) / 86400000
-)
-const puzzle = puzzles[localDay % puzzles.length]
+```bash
+# Automatic deployment
+vercel deploy
+
+# Or build and deploy manually
+npm run build
+vercel --prod
 ```
 
-This ensures:
-- Same puzzle for everyone globally on the same date
-- Automatic rotation at local midnight
-- Cycles through all 35 puzzles
+## 📱 Browser Support
 
-## Share Card Format
+- Chrome/Edge (latest)
+- Firefox (latest)
+- Safari (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
-```
-PEHCHAAN KAUN CARD 🔥
-[Answer Name]
-[Category] • Puzzle #[N]
-─────────────────────────
-TERA SCORE
-[2/5 or 0/5]
-clues mein pehchana / nahi pehchana
+## 🤝 Contributing
 
-[🟥][🟥][🟩][⬜][⬜]
+Contributions welcome! Please feel free to submit issues or pull requests.
 
-[🏆 Better than X%] [🔥 Streak: N]
-[🧠 X/5 clues] [👥 X played]
+## 📄 License
 
-[Roast/Celebration Line]
+ISC
 
-pehchaankaun.vercel.app
-```
+## 👏 Acknowledgments
 
-## Dependencies
+- Inspired by Wordle
+- Built with ❤️ for Indian GK enthusiasts
 
-```json
-{
-  "next": "latest",
-  "react": "latest",
-  "react-dom": "latest",
-  "typescript": "latest",
-  "html-to-image": "latest",
-  "canvas-confetti": "latest"
-}
-```
+---
 
-## License
-
-MIT
+**Made with Next.js and React**
