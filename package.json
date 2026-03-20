@@ -10,7 +10,12 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "keywords": ["indian-gk", "puzzle", "daily-game", "wordle"],
+  "keywords": [
+    "indian-gk",
+    "puzzle",
+    "daily-game",
+    "wordle"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -22,5 +27,8 @@
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/canvas-confetti": "^1.9.0"
   }
 }
