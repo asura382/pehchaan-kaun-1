@@ -68,17 +68,51 @@ export default function ResultCard({
   const shareWhatsApp = async () => {
     if (!cardRef.current) return
     
-    // First download the image
-    await handleDownload()
-    
-    // Then open WhatsApp with text
-    const shareText = `Pehchaan Kaun? 🇮🇳 #${puzzleIndex + 1}
+    try {
+      // Convert card to image
+      const dataUrl = await toPng(cardRef.current, {
+        quality: 1.0,
+        pixelRatio: 2,
+        backgroundColor: '#0f172a'
+      })
+      
+      // Convert dataURL to Blob
+      const blob = await (await fetch(dataUrl)).blob()
+      const file = new File([blob], `pehchaan-kaun-${puzzleIndex + 1}.png`, { type: 'image/png' })
+      
+      // Prepare share text
+      const shareText = `Pehchaan Kaun? 🇮🇳 #${puzzleIndex + 1}
 Category: ${category}
 ${emojiGrid}
 ${won ? `Got it in ${cluesUsed} clue${cluesUsed > 1 ? 's' : ''}! 🎉` : 'Game Over 😔'}
 Play at: pehchaankaun.vercel.app`
-    
-    window.open(`https://wa.me/?text=${encodeURIComponent(shareText)}`, '_blank')
+      
+      // Check if Web Share API is supported (mobile)
+      if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+        // MOBILE: Direct share sheet with image
+        await navigator.share({
+          title: 'Pehchaan Kaun?',
+          text: shareText,
+          files: [file]
+        })
+      } else {
+        // DESKTOP: Download PNG first, then open WhatsApp Web
+        // Step 1: Download the image
+        const link = document.createElement('a')
+        link.download = `pehchaan-kaun-${puzzleIndex + 1}.png`
+        link.href = dataUrl
+        link.click()
+        
+        // Step 2: Wait a bit for download to start, then open WhatsApp Web
+        setTimeout(() => {
+          window.open(`https://wa.me/?text=${encodeURIComponent(shareText)}`, '_blank')
+        }, 1500)
+      }
+    } catch (error) {
+      console.error('Failed to share:', error)
+      // Fallback: Just download the image
+      await handleDownload()
+    }
   }
 
   const copyText = () => {
