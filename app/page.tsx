@@ -5,6 +5,7 @@ import { puzzles, Puzzle } from '../data/puzzles'
 import { getTodayPuzzle, checkGuess, getNextPuzzleTime, formatTime, getEmojiGrid } from '../lib/gameUtils'
 import { Stats, getStats, updateStatsAfterGame, hasPlayedToday } from '../lib/statsUtils'
 import ResultCard from '../components/ResultCard'
+import InstallPrompt from '../components/InstallPrompt'
 import confetti from 'canvas-confetti'
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false)
   const [feedback, setFeedback] = useState<{ type: 'correct' | 'wrong' | 'hint'; message: string } | null>(null)
   const [showLoadingText, setShowLoadingText] = useState(false)
-  const [stats, setStats] = useState<Stats>({ currentStreak: 0, maxStreak: 0, totalPlayed: 0, totalWon: 0, lastPlayedDate: null, lastPuzzleIndex: -1, lastResult: null })
+  const [stats, setStats] = useState<Stats>({ currentStreak: 0, maxStreak: 0, totalPlayed: 0, totalWon: 0, lastPlayedDate: null, lastPuzzleIndex: -1, lastResult: null, lastStreakDate: null })
   const [timeUntilNext, setTimeUntilNext] = useState(getNextPuzzleTime())
   const [showHowToPlay, setShowHowToPlay] = useState(false)
   const [showStats, setShowStats] = useState(false)
@@ -166,6 +167,24 @@ export default function Home() {
   const openStats = () => setShowStats(true)
   const closeStats = () => setShowStats(false)
 
+  const handleNotificationRequest = async () => {
+    if (!('Notification' in window)) {
+      alert('Tera browser notifications support nahi karta')
+      return
+    }
+    if (Notification.permission === 'granted') {
+      alert('Notifications pehle se on hain! ✅')
+      return
+    }
+    const permission = await Notification.requestPermission()
+    if (permission === 'granted') {
+      new Notification('Pehchaan Kaun? 🇮🇳', {
+        body: 'Notifications on! Roz midnight pe puzzle reminder milega 🔥',
+        icon: '/icon-192.png'
+      })
+    }
+  }
+
   if (!currentPuzzle) {
     return <div style={{ textAlign: 'center', padding: '40px' }}>Loading...</div>
   }
@@ -216,6 +235,18 @@ export default function Home() {
             <span>{stats.currentStreak}</span>
           </div>
           
+          <button onClick={handleNotificationRequest} style={{
+            background: 'rgba(255, 255, 255, 0.1)',
+            border: 'none',
+            color: '#fff',
+            width: '40px',
+            height: '40px',
+            borderRadius: '50%',
+            cursor: 'pointer',
+            fontSize: '1.2rem',
+            transition: 'all 0.3s ease'
+          }} title="Enable Notifications">🔔</button>
+          
           <button onClick={openHowToPlay} style={{
             background: 'rgba(255, 255, 255, 0.1)',
             border: 'none',
@@ -241,6 +272,8 @@ export default function Home() {
           }}>📊</button>
         </div>
       </header>
+
+      <InstallPrompt />
 
       {/* Puzzle Info */}
       <div style={{ 

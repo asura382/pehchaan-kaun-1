@@ -6,6 +6,7 @@ export interface Stats {
   lastPlayedDate: string | null
   lastPuzzleIndex: number
   lastResult: { won: boolean; cluesUsed: number } | null
+  lastStreakDate: string | null
 }
 
 const STORAGE_KEY = 'pehchaanKaunStats'
@@ -18,7 +19,8 @@ function getDefaultStats(): Stats {
     totalWon: 0,
     lastPlayedDate: null,
     lastPuzzleIndex: -1,
-    lastResult: null
+    lastResult: null,
+    lastStreakDate: null
   }
 }
 
@@ -36,37 +38,40 @@ export function saveStats(stats: Stats): void {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(stats))
 }
 
-export function updateStatsAfterGame(won: boolean, cluesUsed: number, puzzleIndex: number): Stats {
+export function updateStatsAfterGame(
+  won: boolean,
+  cluesUsed: number,
+  puzzleIndex: number
+): Stats {
   const stats = getStats()
-  const now = new Date()
-  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate()).toDateString()
+  const today = new Date().toDateString()
   
-  // If already played today with same puzzle, don't update
+  // Prevent double counting if called twice
   if (stats.lastPlayedDate === today && stats.lastPuzzleIndex === puzzleIndex) {
     return stats
   }
   
-  // Store previous stats for streak calculation BEFORE updating
-  const previousLastPlayedDate = stats.lastPlayedDate
-  
+  // Always increment totalPlayed
   stats.totalPlayed++
+  
+  // Save played info immediately
   stats.lastPlayedDate = today
   stats.lastPuzzleIndex = puzzleIndex
   stats.lastResult = { won, cluesUsed }
   
   if (won) {
     stats.totalWon++
-    
-    // Check if consecutive day
+    // Check consecutive streak
     const yesterday = new Date()
     yesterday.setDate(yesterday.getDate() - 1)
-    const yesterdayStr = new Date(yesterday.getFullYear(), yesterday.getMonth(), yesterday.getDate()).toDateString()
+    const yesterdayString = yesterday.toDateString()
     
-    if (previousLastPlayedDate === yesterdayStr) {
+    if (stats.lastStreakDate === yesterdayString) {
       stats.currentStreak++
     } else {
       stats.currentStreak = 1
     }
+    stats.lastStreakDate = today
     
     if (stats.currentStreak > stats.maxStreak) {
       stats.maxStreak = stats.currentStreak
@@ -80,13 +85,16 @@ export function updateStatsAfterGame(won: boolean, cluesUsed: number, puzzleInde
 }
 
 export function hasPlayedToday(puzzleIndex: number): boolean {
-  if (typeof window === 'undefined') return false
-  
-  const stats = getStats()
-  const now = new Date()
-  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate()).toDateString()
-  
-  return stats.lastPlayedDate === today && stats.lastPuzzleIndex === puzzleIndex
+  try {
+    const stats = getStats()
+    const today = new Date().toDateString()
+    return (
+      stats.lastPlayedDate === today && 
+      stats.lastPuzzleIndex === puzzleIndex
+    )
+  } catch {
+    return false
+  }
 }
 
 export function getLastResult(): { won: boolean; cluesUsed: number } | null {
