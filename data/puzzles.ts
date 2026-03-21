@@ -1104,5 +1104,313 @@ export const puzzles: Puzzle[] = [
       "I received the Bharat Ratna in 2001",
       "I am considered the greatest shehnai player ever"
     ]
+  },
+  {
+    answer: "Ravi Shankar",
+    category: "Indian Musician",
+    clues: [
+      "I was born in Varanasi in 1920",
+      "I am a sitar player",
+      "I collaborated with Beatle George Harrison",
+      "I received the Bharat Ratna in 1999",
+      "They call me the Godfather of World Music"
+    ]
+  },
+  {
+    answer: "Zakir Hussain",
+    category: "Indian Musician",
+    clues: [
+      "I was born in Mumbai in 1951",
+      "I am a tabla player",
+      "My father Alla Rakha was also a tabla maestro",
+      "I won multiple Grammy Awards",
+      "I am considered the greatest tabla player alive"
+    ]
+  },
+  {
+    answer: "MS Subbulakshmi",
+    category: "Indian Musician",
+    clues: [
+      "I was born in Madurai Tamil Nadu in 1916",
+      "I am a Carnatic classical singer",
+      "I was the first musician to receive Bharat Ratna",
+      "I performed at the United Nations in 1966",
+      "They call me the Queen of Music"
+    ]
+  },
+  {
+    answer: "Gulzar",
+    category: "Indian Lyricist",
+    clues: [
+      "I was born in Dina now Pakistan in 1934",
+      "I am a poet lyricist and film director",
+      "I won Academy Award for Jai Ho from Slumdog Millionaire",
+      "I wrote lyrics for Mera Kuch Saaman and many classics",
+      "My real name is Sampooran Singh Kalra"
+    ]
+  },
+  {
+    answer: "Javed Akhtar",
+    category: "Indian Lyricist",
+    clues: [
+      "I was born in Gwalior in 1945",
+      "I am a poet screenwriter and lyricist",
+      "I co-wrote scripts for Sholay and Deewar with Salim Khan",
+      "I have won five National Film Awards",
+      "I am married to actress Shabana Azmi"
+    ]
+  },
+  {
+    answer: "Naseeruddin Shah",
+    category: "Bollywood Actor",
+    clues: [
+      "I was born in Barabanki Uttar Pradesh in 1950",
+      "I studied at National School of Drama",
+      "I am known for parallel cinema and theatre",
+      "I starred in Sparsh Masoom and A Wednesday",
+      "They call me one of India greatest actors"
+    ]
+  },
+  {
+    answer: "Om Puri",
+    category: "Bollywood Actor",
+    clues: [
+      "I was born in Ambala Haryana in 1950",
+      "I studied at FTII Pune and National School of Drama",
+      "I acted in both Bollywood and Hollywood films",
+      "I starred in Ardh Satya and East Is East",
+      "I received Padma Shri in 1990"
+    ]
+  },
+  {
+    answer: "Shabana Azmi",
+    category: "Bollywood Actress",
+    clues: [
+      "I was born in Hyderabad in 1950",
+      "My father was poet Kaifi Azmi",
+      "I am known for parallel cinema and social causes",
+      "I won five National Film Awards",
+      "I starred in Ankur Arth and Fire"
+    ]
+  },
+  {
+    answer: "Smita Patil",
+    category: "Bollywood Actress",
+    clues: [
+      "I was born in Pune in 1955",
+      "I was a news reader before acting",
+      "I am an icon of Indian parallel cinema",
+      "I won two National Film Awards",
+      "I passed away tragically young in 1986"
+    ]
+  },
+  {
+    answer: "Dev Anand",
+    category: "Bollywood Actor",
+    clues: [
+      "I was born in Gurdaspur Punjab in 1923",
+      "I co-founded Navketan Films production house",
+      "I was known as the Evergreen Hero of Bollywood",
+      "I starred in Guide and Jewel Thief",
+      "I kept making films until my 80s"
+    ]
+  },
+  {
+    answer: "Raj Kapoor",
+    category: "Bollywood Actor",
+    clues: [
+      "I was born in Peshawar in 1924",
+      "I was the first showman of Bollywood",
+      "I founded RK Films at age 24",
+      "I directed and starred in Awaara and Shree 420",
+      "They call me the Charlie Chaplin of India"
+    ]
+  },
+  {
+    answer: "Guru Dutt",
+    category: "Indian Filmmaker",
+    clues: [
+      "I was born in Bangalore in 1925",
+      "I am considered one of India greatest filmmakers",
+      "I directed Pyaasa and Kaagaz Ke Phool",
+      "I was known for poetic visual storytelling",
+      "I passed away mysteriously in 1964 at age 39"
+    ]
+  },
+  {
+    answer: "Mira Nair",
+    category: "Indian Filmmaker",
+    clues: [
+      "I was born in Rourkela Odisha in 1957",
+      "I studied at Harvard University",
+      "I directed Salaam Bombay which won Camera d Or at Cannes",
+      "I also directed Monsoon Wedding and The Namesake",
+      "I am one of India most celebrated international directors"
+    ]
+  },
+  {
+    answer: "Rekha",
+    category: "Bollywood Actress",
+    clues: [
+      "I was born in Chennai in 1954",
+      "My father was South Indian actor Gemini Ganesan",
+      "I transformed my image completely in the late 1970s",
+      "I starred in Umrao Jaan and Silsila",
+      "I am known as the eternal beauty of Bollywood"
+    ]
+  },
+  {
+    answer: "Hema Malini",
+    category: "Bollywood Actress",
+    clues: [
+      "I was born in Ammankudi Tamil Nadu in 1948",
+      "I am a classical dancer and actress",
+      "I starred in Sholay as Basanti",
+      "I married actor Dharmendra",
+      "They call me the Dream Girl of Bollywood"
+    ]
+  },
+  {
+    answer: "Madhuri Dixit",
+    category: "Bollywood Actress",
+    clues: [
+      "I was born in Mumbai in 1967",
+      "I am known for my exceptional dancing skills",
+      "I starred in Tezaab Dil and Hum Aapke Hain Koun",
+      "I trained in Kathak dance for years",
+      "They call me the Dhak Dhak Girl of Bollywood"
+    ]
+  },
+  {
+    answer: "Sridevi",
+    category: "Bollywood Actress",
+    clues: [
+      "I was born in Sivakasi Tamil Nadu in 1963",
+      "I started acting as a child in South Indian films",
+      "I was the first female superstar of Bollywood",
+      "I starred in Chandni Nagina and English Vinglish",
+      "I passed away in Dubai in 2018"
+    ]
+  },
+  {
+    answer: "Tabu",
+    category: "Bollywood Actress",
+    clues: [
+      "I was born in Hyderabad in 1971",
+      "I am the niece of actress Shashi Kala",
+      "I won two National Awards for Maachis and Chandni Bar",
+      "I starred in Haider and Andhadhun",
+      "They call me the most versatile actress of Bollywood"
+    ]
+  },
+  {
+    answer: "Konkona Sen Sharma",
+    category: "Bollywood Actress",
+    clues: [
+      "I was born in Kolkata in 1979",
+      "My mother is filmmaker Aparna Sen",
+      "I won National Award for Page 3 and Amu",
+      "I also direct films",
+      "I am known for choosing unconventional roles"
+    ]
+  },
+  {
+    answer: "Shahid Kapoor",
+    category: "Bollywood Actor",
+    clues: [
+      "I was born in Delhi in 1981",
+      "My father is actor Pankaj Kapoor",
+      "I debuted with Ishq Vishk in 2003",
+      "I won National Award for Kaminey and Haider",
+      "I starred in Kabir Singh and Jersey"
+    ]
+  },
+  {
+    answer: "Prabhas",
+    category: "South Indian Actor",
+    clues: [
+      "I was born in Ongole Andhra Pradesh in 1979",
+      "I am known as the Rebel Star",
+      "I played the lead in Baahubali franchise",
+      "I became a pan-India star after Baahubali",
+      "I starred in Saaho and Radhe Shyam"
+    ]
+  },
+  {
+    answer: "Allu Arjun",
+    category: "South Indian Actor",
+    clues: [
+      "I was born in Chennai in 1983",
+      "I am the nephew of producer Allu Aravind",
+      "I am known as the Stylish Star",
+      "I starred in Pushpa The Rise which became a pan-India hit",
+      "I won National Award for Pushpa"
+    ]
+  },
+  {
+    answer: "Thalapathy Vijay",
+    category: "South Indian Actor",
+    clues: [
+      "I was born in Chennai in 1974",
+      "My father SA Chandrasekhar is a film director",
+      "I am one of the biggest stars in Tamil cinema",
+      "My fans call me Thalapathy meaning Commander",
+      "I entered politics in 2024 founding Tamilaga Vettri Kazhagam"
+    ]
+  },
+  {
+    answer: "Mahesh Babu",
+    category: "South Indian Actor",
+    clues: [
+      "I was born in Chennai in 1975",
+      "My father Krishna was a legendary Telugu actor",
+      "I am known as Prince of Tollywood",
+      "I starred in Pokiri Businessman and Srimanthudu",
+      "I am known for rejecting Bollywood offers"
+    ]
+  },
+  {
+    answer: "Diljit Dosanjh",
+    category: "Punjabi Singer",
+    clues: [
+      "I was born in Dosanjh Kalan Punjab in 1984",
+      "I am a singer actor and social media personality",
+      "I was the first Punjabi artist to perform at Coachella",
+      "I starred in Udta Punjab and Good Newwz",
+      "I am known for my traditional Punjabi style"
+    ]
+  },
+  {
+    answer: "Neha Kakkar",
+    category: "Bollywood Singer",
+    clues: [
+      "I was born in Rishikesh in 1988",
+      "I started singing in gurudwaras as a child",
+      "I was a contestant on Indian Idol",
+      "I am known for party songs and remixes",
+      "My brother Tony Kakkar is also a singer"
+    ]
+  },
+  {
+    answer: "Arijit Singh",
+    category: "Bollywood Singer",
+    clues: [
+      "I was born in Jiaganj West Bengal in 1987",
+      "I participated in reality show Fame Gurukul",
+      "I am the most streamed Indian artist on Spotify",
+      "I sang Tum Hi Ho from Aashiqui 2",
+      "They call me the voice of the new generation"
+    ]
+  },
+  {
+    answer: "Shreya Ghoshal",
+    category: "Bollywood Singer",
+    clues: [
+      "I was born in Murshidabad West Bengal in 1984",
+      "I won Sa Re Ga Ma Pa reality show as a teenager",
+      "I have won four National Film Awards",
+      "I sang Bairi Piya and Jadu Hai Nasha Hai",
+      "They call me the melody queen of Bollywood"
+    ]
   }
 ]
