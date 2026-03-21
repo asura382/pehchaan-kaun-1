@@ -1412,5 +1412,291 @@ export const puzzles: Puzzle[] = [
       "I sang Bairi Piya and Jadu Hai Nasha Hai",
       "They call me the melody queen of Bollywood"
     ]
+  },
+  {
+    answer: "Vishal Dadlani",
+    category: "Music Composer",
+    clues: [
+      "I was born in Mumbai in 1974",
+      "I am one half of the composer duo Vishal-Shekhar",
+      "I am also a judge on Indian Idol",
+      "I composed music for Om Shanti Om and Bang Bang",
+      "I am known for my energetic stage presence"
+    ]
+  },
+  {
+    answer: "Pritam Chakraborty",
+    category: "Music Composer",
+    clues: [
+      "I was born in Kolkata in 1971",
+      "I am known simply as Pritam in Bollywood",
+      "I composed music for Jab We Met and Barfi",
+      "I am one of the highest paid composers in Bollywood",
+      "My compositions are known for being melodious and hummable"
+    ]
+  },
+  {
+    answer: "Vikramaditya Motwane",
+    category: "Indian Filmmaker",
+    clues: [
+      "I was born in Mumbai in 1979",
+      "I assisted Sanjay Leela Bhansali early in my career",
+      "I directed Udaan Lootera and Bhavesh Joshi",
+      "I also directed the web series Sacred Games",
+      "I am considered one of India finest young filmmakers"
+    ]
+  },
+  {
+    answer: "Anurag Kashyap",
+    category: "Indian Filmmaker",
+    clues: [
+      "I was born in Gorakhpur Uttar Pradesh in 1972",
+      "I wrote the script for Satya",
+      "I directed Gangs of Wasseypur which became a cult classic",
+      "I am known for gritty realistic cinema",
+      "I co-founded the production company Phantom Films"
+    ]
+  },
+  {
+    answer: "Zoya Akhtar",
+    category: "Indian Filmmaker",
+    clues: [
+      "I was born in Mumbai in 1972",
+      "My father is screenwriter Javed Akhtar",
+      "I directed Zindagi Na Milegi Dobara and Dil Dhadakne Do",
+      "I also directed the anthology film Lust Stories",
+      "I am one of Bollywood most celebrated female directors"
+    ]
+  },
+  {
+    answer: "Imtiaz Ali",
+    category: "Indian Filmmaker",
+    clues: [
+      "I was born in Jamshedpur in 1971",
+      "I started my career in television",
+      "I directed Jab We Met Rockstar and Highway",
+      "I am known for road trip romance films",
+      "My films often feature journeys both physical and emotional"
+    ]
+  },
+  {
+    answer: "Sanjay Leela Bhansali",
+    category: "Indian Filmmaker",
+    clues: [
+      "I was born in Mumbai in 1963",
+      "I assisted Vidhu Vinod Chopra early in career",
+      "I directed Hum Dil De Chuke Sanam and Devdas",
+      "I am known for grand visual spectacles",
+      "I directed Padmaavat and Gangubai Kathiawadi"
+    ]
+  },
+  {
+    answer: "Karan Johar",
+    category: "Indian Filmmaker",
+    clues: [
+      "I was born in Mumbai in 1972",
+      "My father Yash Johar was a film producer",
+      "I directed Kuch Kuch Hota Hai as my debut",
+      "I host the celebrity chat show Koffee With Karan",
+      "I founded Dharma Productions"
+    ]
+  },
+  {
+    answer: "Farhan Akhtar",
+    category: "Bollywood Actor",
+    clues: [
+      "I was born in Mumbai in 1974",
+      "My father is screenwriter Javed Akhtar",
+      "I made my directorial debut with Dil Chahta Hai",
+      "I played Milkha Singh in Bhaag Milkha Bhaag",
+      "I am also a singer and producer"
+    ]
+  },
+  {
+    answer: "Vidya Balan",
+    category: "Bollywood Actress",
+    clues: [
+      "I was born in Mumbai in 1978",
+      "I started my career in television",
+      "I won National Award for The Dirty Picture",
+      "I starred in Kahaani and Tumhari Sulu",
+      "I am known for playing strong women led roles"
+    ]
+  },
+  {
+    answer: "Kangana Ranaut",
+    category: "Bollywood Actress",
+    clues: [
+      "I was born in Bhambla Himachal Pradesh in 1987",
+      "I ran away from home to become an actress",
+      "I won three National Awards for Queen Tanu Weds Manu and Manikarnika",
+      "I am known for my outspoken opinions",
+      "They call me the Queen of Bollywood"
+    ]
+  },
+  {
+    answer: "Anushka Sharma",
+    category: "Bollywood Actress",
+    clues: [
+      "I was born in Ayodhya Uttar Pradesh in 1988",
+      "I debuted with Rab Ne Bana Di Jodi in 2008",
+      "I founded the production company Clean Slate Filmz",
+      "I produced NH10 and Pari",
+      "I married Indian cricket captain Virat Kohli"
+    ]
+  },
+  {
+    answer: "Sonam Kapoor",
+    category: "Bollywood Actress",
+    clues: [
+      "I was born in Mumbai in 1985",
+      "My father is actor Anil Kapoor",
+      "I debuted with Saawariya alongside Ranbir Kapoor",
+      "I am known as the fashion icon of Bollywood",
+      "I starred in Neerja and Veere Di Wedding"
+    ]
+  },
+  {
+    answer: "Parineeti Chopra",
+    category: "Bollywood Actress",
+    clues: [
+      "I was born in Ambala Haryana in 1988",
+      "I am the cousin of Priyanka Chopra",
+      "I debuted with Ladies vs Ricky Bahl in 2011",
+      "I starred in Hasee Toh Phasee and Golmaal Again",
+      "I married politician Raghav Chadha in 2023"
+    ]
+  },
+  {
+    answer: "Tiger Shroff",
+    category: "Bollywood Actor",
+    clues: [
+      "I was born in Mumbai in 1990",
+      "My father is actor Jackie Shroff",
+      "I debuted with Heropanti in 2014",
+      "I am known for my martial arts skills and fitness",
+      "I starred in Baaghi franchise and War"
+    ]
+  },
+  {
+    answer: "Sidharth Malhotra",
+    category: "Bollywood Actor",
+    clues: [
+      "I was born in Delhi in 1985",
+      "I worked as a model before acting",
+      "I debuted with Student of the Year in 2012",
+      "I starred in Hasee Toh Phasee and Shershaah",
+      "I married actress Kiara Advani in 2023"
+    ]
+  },
+  {
+    answer: "Kiara Advani",
+    category: "Bollywood Actress",
+    clues: [
+      "I was born in Mumbai in 1992",
+      "My real name is Alia Advani",
+      "I debuted with Fugly in 2014",
+      "I starred in Kabir Singh and Shershaah",
+      "I married actor Sidharth Malhotra in 2023"
+    ]
+  },
+  {
+    answer: "Guru Gobind Singh",
+    category: "Indian Religious Leader",
+    clues: [
+      "I was born in Patna Bihar in 1666",
+      "I am the tenth and last human Sikh Guru",
+      "I founded the Khalsa in 1699",
+      "I declared Guru Granth Sahib as the eternal Guru",
+      "I was both a warrior and a poet"
+    ]
+  },
+  {
+    answer: "Tipu Sultan",
+    category: "Indian Ruler",
+    clues: [
+      "I was born in Devanahalli Karnataka in 1751",
+      "I was the ruler of Kingdom of Mysore",
+      "I fought four wars against the British East India Company",
+      "I was one of the first rulers to use rockets in warfare",
+      "They call me the Tiger of Mysore"
+    ]
+  },
+  {
+    answer: "Akbar",
+    category: "Indian Ruler",
+    clues: [
+      "I was born in Umerkot now Pakistan in 1542",
+      "I was the third Mughal Emperor",
+      "I am known for religious tolerance and Din-i-Ilahi",
+      "I had nine gems Navaratnas in my court",
+      "They call me Akbar the Great"
+    ]
+  },
+  {
+    answer: "Shivaji Maharaj",
+    category: "Indian Ruler",
+    clues: [
+      "I was born in Shivneri fort Maharashtra in 1630",
+      "I founded the Maratha Empire",
+      "I introduced the concept of guerrilla warfare in India",
+      "I was crowned Chhatrapati in 1674",
+      "They call me the Father of the Indian Navy"
+    ]
+  },
+  {
+    answer: "Ashoka",
+    category: "Indian Ruler",
+    clues: [
+      "I ruled the Maurya Empire in 268 BCE",
+      "I fought the bloody Kalinga War",
+      "I converted to Buddhism after Kalinga",
+      "I spread Buddhism across Asia",
+      "The Ashoka Chakra on India flag is named after me"
+    ]
+  },
+  {
+    answer: "Chandragupta Maurya",
+    category: "Indian Ruler",
+    clues: [
+      "I founded the Maurya Empire around 321 BCE",
+      "I was mentored by Chanakya also known as Kautilya",
+      "I unified most of the Indian subcontinent",
+      "I defeated the generals of Alexander the Great",
+      "I later converted to Jainism"
+    ]
+  },
+  {
+    answer: "Chanakya",
+    category: "Indian Philosopher",
+    clues: [
+      "I lived around 350 BCE in ancient India",
+      "I was a teacher at Takshashila university",
+      "I wrote the Arthashastra on statecraft and economics",
+      "I mentored Chandragupta Maurya to build the Maurya Empire",
+      "They also call me Kautilya and Vishnugupta"
+    ]
+  },
+  {
+    answer: "Aryabhata",
+    category: "Indian Scientist",
+    clues: [
+      "I was born in 476 CE in ancient India",
+      "I am a mathematician and astronomer",
+      "I calculated the value of Pi to four decimal places",
+      "I explained that Earth rotates on its own axis",
+      "India first satellite was named after me"
+    ]
+  },
+  {
+    answer: "Tenzing Norgay",
+    category: "Indian Sportsperson",
+    clues: [
+      "I was born in Nepal but settled in Darjeeling India",
+      "I am a Sherpa mountaineer",
+      "I was one of the first two people to reach the summit of Everest",
+      "I summited Everest with Edmund Hillary in 1953",
+      "The Tenzing Norgay National Adventure Award is named after me"
+    ]
   }
 ]
