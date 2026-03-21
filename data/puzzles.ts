@@ -1060,5 +1060,49 @@ export const puzzles: Puzzle[] = [
       "I hold the record for most spacewalks by a woman",
       "I spent over 300 days in space across missions"
     ]
+  },
+  {
+    answer: "Sourav Ganguly",
+    category: "Indian Cricketer",
+    clues: [
+      "I was born in Kolkata in 1972",
+      "I am a left handed opening batsman",
+      "I captained India through a golden era",
+      "I was known for removing my shirt at Lords",
+      "They call me Dada and the Prince of Kolkata"
+    ]
+  },
+  {
+    answer: "Anil Kumble",
+    category: "Indian Cricketer",
+    clues: [
+      "I was born in Bangalore in 1970",
+      "I am a leg spin bowler",
+      "I took all 10 wickets in a Test innings against Pakistan",
+      "I captained India in Test cricket",
+      "They call me Jumbo"
+    ]
+  },
+  {
+    answer: "MS Swaminathan",
+    category: "Indian Scientist",
+    clues: [
+      "I was born in Kumbakonam Tamil Nadu in 1925",
+      "I am a geneticist and agricultural scientist",
+      "I led India Green Revolution in the 1960s",
+      "I helped India become self sufficient in food production",
+      "They call me the Father of Green Revolution in India"
+    ]
+  },
+  {
+    answer: "Bismillah Khan",
+    category: "Indian Musician",
+    clues: [
+      "I was born in Bihar in 1916",
+      "I am a shehnai player",
+      "I performed at India first Independence Day celebration in 1947",
+      "I received the Bharat Ratna in 2001",
+      "I am considered the greatest shehnai player ever"
+    ]
   }
 ]
