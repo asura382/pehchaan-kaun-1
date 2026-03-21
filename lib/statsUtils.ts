@@ -46,6 +46,9 @@ export function updateStatsAfterGame(won: boolean, cluesUsed: number, puzzleInde
     return stats
   }
   
+  // Store previous stats for streak calculation BEFORE updating
+  const previousLastPlayedDate = stats.lastPlayedDate
+  
   stats.totalPlayed++
   stats.lastPlayedDate = today
   stats.lastPuzzleIndex = puzzleIndex
@@ -59,7 +62,7 @@ export function updateStatsAfterGame(won: boolean, cluesUsed: number, puzzleInde
     yesterday.setDate(yesterday.getDate() - 1)
     const yesterdayStr = new Date(yesterday.getFullYear(), yesterday.getMonth(), yesterday.getDate()).toDateString()
     
-    if (stats.lastPlayedDate === yesterdayStr) {
+    if (previousLastPlayedDate === yesterdayStr) {
       stats.currentStreak++
     } else {
       stats.currentStreak = 1
