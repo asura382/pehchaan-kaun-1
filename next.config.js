@@ -16,9 +16,8 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true
   },
-  turbopack: {},
-  eslint: {
-    ignoreDuringBuilds: true
+  turbopack: {
+    root: './'
   },
   // Security headers
   async headers() {
