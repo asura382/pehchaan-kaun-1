@@ -168,10 +168,13 @@ export function updateStatsAfterGame(
 
 export function hasPlayedToday(puzzleIndex: number): boolean {
   try {
-    const stats = getStats()
+    if (typeof window === 'undefined') return false
+    const raw = localStorage.getItem('pehchaanKaunStats')
+    if (!raw) return false
+    const stats = JSON.parse(raw)
     const today = new Date().toDateString()
     return (
-      stats.lastPlayedDate === today && 
+      stats.lastPlayedDate === today &&
       stats.lastPuzzleIndex === puzzleIndex
     )
   } catch {

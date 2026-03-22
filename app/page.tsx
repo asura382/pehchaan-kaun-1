@@ -9,6 +9,7 @@ import ResultCard from '../components/ResultCard'
 import InstallPrompt from '../components/InstallPrompt'
 import NotificationPopup from '../components/NotificationPopup'
 import BadgePopup from '../components/BadgePopup'
+import BadgeShelf from '../components/BadgeShelf'
 import confetti from 'canvas-confetti'
 
 export default function Home() {
@@ -568,6 +569,9 @@ export default function Home() {
                 <div style={{ fontSize: '0.85rem', color: '#aaa', marginTop: '5px' }}>Max Streak</div>
               </div>
             </div>
+            
+            <BadgeShelf earnedBadgeIds={stats.earnedBadges || []} />
+            
             <button onClick={closeStats} style={{
               marginTop: '20px',
               padding: '15px 30px',
