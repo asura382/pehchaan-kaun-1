@@ -6,6 +6,7 @@ import { getTodayPuzzle, checkGuess, getNextPuzzleTime, formatTime, getEmojiGrid
 import { Stats, getStats, updateStatsAfterGame, hasPlayedToday } from '../lib/statsUtils'
 import ResultCard from '../components/ResultCard'
 import InstallPrompt from '../components/InstallPrompt'
+import NotificationPopup from '../components/NotificationPopup'
 import confetti from 'canvas-confetti'
 
 export default function Home() {
@@ -274,6 +275,7 @@ export default function Home() {
       </header>
 
       <InstallPrompt />
+      <NotificationPopup />
 
       {/* Puzzle Info */}
       <div style={{ 
