@@ -24,6 +24,7 @@ export default function Home() {
   const [timeUntilNext, setTimeUntilNext] = useState(getNextPuzzleTime())
   const [showHowToPlay, setShowHowToPlay] = useState(false)
   const [showStats, setShowStats] = useState(false)
+  const [gameFinished, setGameFinished] = useState(false)
 
   const inputRef = useRef<HTMLInputElement>(null)
   const btnRef = useRef<HTMLButtonElement>(null)
@@ -104,6 +105,7 @@ export default function Home() {
       setGameOver(true)
       updateStatsAfterGame(true, currentClueIndex + 1, puzzleIndex)
       setStats(getStats())
+      setGameFinished(true)
       
       setTimeout(() => {
         setFeedback(null)
@@ -141,6 +143,7 @@ export default function Home() {
             setStats(getStats())
             setFeedback(null)
             setShowLoadingText(false)
+            setGameFinished(true)
           }, 1000)
         } else {
           // Show next clue
@@ -548,6 +551,8 @@ export default function Home() {
           </div>
         </div>
       )}
+      
+      <NotificationPopup show={gameFinished} />
     </div>
   )
 }

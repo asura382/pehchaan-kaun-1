@@ -2,43 +2,56 @@
 
 import { useState, useEffect } from 'react'
 
-export default function NotificationPopup() {
-  const [show, setShow] = useState(false)
+interface NotificationPopupProps {
+  show: boolean  // controlled by parent after game ends
+}
+
+export default function NotificationPopup({ show }: NotificationPopupProps) {
+  const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    // Wait 3 seconds then check if should show
-    const timer = setTimeout(() => {
-      if (typeof window === 'undefined') return
-      if (!('Notification' in window)) return
-      if (Notification.permission === 'granted') return
-      if (Notification.permission === 'denied') return
-      if (localStorage.getItem('notifAsked') === 'true') return
-      
-      setShow(true)
-    }, 3000)
+    if (!show) return
+    if (typeof window === 'undefined') return
+    if (!('Notification' in window)) return
+    if (Notification.permission === 'granted') return
+    if (Notification.permission === 'denied') return
 
+    // Check if user already said yes
+    const notifGranted = localStorage.getItem('notifGranted')
+    if (notifGranted === 'true') return
+
+    // Check if user said baad mein and 3 days haven't passed
+    const baadMeinDate = localStorage.getItem('notifBaadMein')
+    if (baadMeinDate) {
+      const daysSince = (Date.now() - parseInt(baadMeinDate)) / (1000 * 60 * 60 * 24)
+      if (daysSince < 3) return  // less than 3 days, don't show
+    }
+
+    // Show after 1.5 seconds of result screen appearing
+    const timer = setTimeout(() => setVisible(true), 1500)
     return () => clearTimeout(timer)
-  }, [])
+  }, [show])
 
   const handleYes = async () => {
-    localStorage.setItem('notifAsked', 'true')
-    setShow(false)
-    
+    localStorage.setItem('notifGranted', 'true')
+    localStorage.removeItem('notifBaadMein')
+    setVisible(false)
+
     const permission = await Notification.requestPermission()
-    
+
     if (permission === 'granted') {
       new Notification('Pehchaan Kaun? 🇮🇳', {
         body: 'Kal se roz midnight pe naya puzzle reminder milega! 🔥',
         icon: '/icon-192.png'
       })
-      // Schedule daily notification
       scheduleMidnightNotification()
     }
   }
 
   const handleLater = () => {
-    localStorage.setItem('notifAsked', 'true')
-    setShow(false)
+    // Save current timestamp
+    localStorage.setItem('notifBaadMein', Date.now().toString())
+    setVisible(false)
   }
 
   function scheduleMidnightNotification() {
@@ -47,10 +60,10 @@ export default function NotificationPopup() {
       now.getFullYear(),
       now.getMonth(),
       now.getDate() + 1,
-      0, 5, 0  // 12:05 AM
+      0, 5, 0
     )
-    const msUntilMidnight = midnight.getTime() - now.getTime()
-    
+    const ms = midnight.getTime() - now.getTime()
+
     setTimeout(() => {
       if (Notification.permission === 'granted') {
         new Notification('Pehchaan Kaun? 🇮🇳', {
@@ -59,14 +72,14 @@ export default function NotificationPopup() {
         })
         scheduleMidnightNotification()
       }
-    }, msUntilMidnight)
+    }, ms)
   }
 
-  if (!show) return null
+  if (!visible) return null
 
   return (
     <>
-      {/* Dark overlay */}
+      {/* Overlay */}
       <div style={{
         position: 'fixed',
         inset: 0,
@@ -75,7 +88,7 @@ export default function NotificationPopup() {
         backdropFilter: 'blur(4px)'
       }} />
 
-      {/* Popup card */}
+      {/* Popup */}
       <div style={{
         position: 'fixed',
         bottom: '24px',
@@ -91,18 +104,19 @@ export default function NotificationPopup() {
         boxShadow: '0 20px 60px rgba(0,0,0,0.5)',
         animation: 'slideUp 0.4s cubic-bezier(0.34,1.56,0.64,1)'
       }}>
-        {/* Bell icon */}
+
+        {/* Bell */}
         <div style={{
-          width: '56px',
-          height: '56px',
+          width: '60px',
+          height: '60px',
           background: 'linear-gradient(135deg, #FF6B00, #FF9F43)',
           borderRadius: '50%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          fontSize: '1.6rem',
+          fontSize: '1.8rem',
           margin: '0 auto 16px',
-          boxShadow: '0 8px 20px rgba(255,107,0,0.3)'
+          boxShadow: '0 8px 20px rgba(255,107,0,0.35)'
         }}>
           🔔
         </div>
@@ -116,7 +130,7 @@ export default function NotificationPopup() {
           textAlign: 'center',
           marginBottom: '8px'
         }}>
-          Roz ka puzzle yaad rakhein?
+          Kal ka puzzle miss mat karna!
         </div>
 
         {/* Description */}
@@ -125,11 +139,10 @@ export default function NotificationPopup() {
           color: '#aaa',
           textAlign: 'center',
           marginBottom: '22px',
-          lineHeight: '1.6'
+          lineHeight: '1.7'
         }}>
-          Har roz midnight pe naya puzzle aata hai 🇮🇳
-          <br/>
-          Notification on karo toh miss mat karo!
+          Har roz midnight pe naya puzzle aata hai 🇮🇳<br/>
+          Notification on karo toh hum yaad dilayenge!
         </div>
 
         {/* Buttons */}
@@ -148,13 +161,14 @@ export default function NotificationPopup() {
               borderRadius: '12px',
               color: '#fff',
               fontFamily: 'Baloo 2, cursive',
-              fontSize: '1rem',
+              fontSize: '1.05rem',
               fontWeight: '700',
               cursor: 'pointer',
-              letterSpacing: '0.02em'
+              letterSpacing: '0.02em',
+              boxShadow: '0 6px 20px rgba(255,107,0,0.3)'
             }}
           >
-            🔔 Haan, reminder chahiye!
+            🔔 Haan, bilkul! Yaad dilao
           </button>
 
           <button
@@ -165,14 +179,14 @@ export default function NotificationPopup() {
               background: 'transparent',
               border: '1px solid rgba(255,255,255,0.1)',
               borderRadius: '12px',
-              color: '#888',
+              color: '#777',
               fontFamily: 'Baloo 2, cursive',
               fontSize: '0.95rem',
               fontWeight: '600',
               cursor: 'pointer'
             }}
           >
-            Baad mein
+            Baad mein poochna
           </button>
         </div>
       </div>
@@ -181,11 +195,11 @@ export default function NotificationPopup() {
         @keyframes slideUp {
           from { 
             opacity: 0; 
-            transform: translateX(-50%) translateY(40px); 
+            transform: translateX(-50%) translateY(50px) scale(0.95); 
           }
           to { 
             opacity: 1; 
-            transform: translateX(-50%) translateY(0); 
+            transform: translateX(-50%) translateY(0) scale(1); 
           }
         }
       `}</style>
