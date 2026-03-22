@@ -278,7 +278,7 @@ export default function Home() {
       </header>
 
       <InstallPrompt />
-      <NotificationPopup />
+      <NotificationPopup show={gameFinished} />
 
       {/* Puzzle Info */}
       <div style={{ 
