@@ -1,8 +1,9 @@
 // Service Worker for Pehchaan Kaun? PWA
-const CACHE_NAME = 'pehchaan-kaun-v1'
+const CACHE_NAME = 'pehchaan-kaun-v2'
 const urlsToCache = [
   '/',
-  '/manifest.json'
+  '/manifest.json',
+  '/icon-192.png'
 ]
 
 // Install event - cache assets
@@ -19,6 +20,9 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {
       return response || fetch(event.request)
+    }).catch(() => {
+      // Handle network errors gracefully
+      return caches.match('/')
     })
   )
 })
@@ -38,7 +42,7 @@ self.addEventListener('activate', (event) => {
   )
 })
 
-// Handle push notifications
+// Handle push notifications - only use supported options
 self.addEventListener('push', (event) => {
   const data = event.data ? event.data.json() : {}
   
@@ -46,24 +50,9 @@ self.addEventListener('push', (event) => {
   const options = {
     body: data.body || 'New puzzle is live! Can you guess today\'s personality?',
     icon: '/icon-192.png',
-    badge: '/icon-192.png',
-    vibrate: [200, 100, 200],
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1
-    },
-    actions: [
-      {
-        action: 'play',
-        title: 'Play Now',
-        icon: '/icon-192.png'
-      },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/icon-192.png'
-      }
-    ]
+    tag: 'pehchaan-kaun-notification',
+    requireInteraction: false,
+    silent: false
   }
 
   event.waitUntil(
@@ -75,9 +64,7 @@ self.addEventListener('push', (event) => {
 self.addEventListener('notificationclick', (event) => {
   event.notification.close()
 
-  if (event.action === 'play') {
-    event.waitUntil(
-      clients.openWindow('/')
-    )
-  }
+  event.waitUntil(
+    clients.openWindow('/')
+  )
 })

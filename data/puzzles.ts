@@ -1697,8 +1697,7 @@ export const puzzles: Puzzle[] = [
       "I was one of the first two people to reach the summit of Everest",
       "I summited Everest with Edmund Hillary in 1953",
       "The Tenzing Norgay National Adventure Award is named after me"
-    ]
-  }  },
+  },
   {
     answer: "Prithviraj Chauhan",
     category: "Indian Ruler",

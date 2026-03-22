@@ -9,8 +9,16 @@ export function getTodayPuzzle(puzzles: Puzzle[]) {
 }
 
 export function checkGuess(guess: string, answer: string): 'correct' | 'hint' | 'wrong' {
+  // Input validation and sanitization
+  if (!guess || !answer || typeof guess !== 'string' || typeof answer !== 'string') {
+    return 'wrong'
+  }
+  
   const g = guess.toLowerCase().trim()
   const a = answer.toLowerCase().trim()
+  
+  // Prevent empty string comparisons
+  if (!g || !a) return 'wrong'
   
   if (g === a) return 'correct'
   if (g.includes(a) || a.includes(g)) return 'correct'

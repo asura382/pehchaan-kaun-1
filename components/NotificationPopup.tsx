@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 interface NotificationPopupProps {
   show: boolean  // controlled by parent after game ends
@@ -8,6 +8,7 @@ interface NotificationPopupProps {
 
 export default function NotificationPopup({ show }: NotificationPopupProps) {
   const [visible, setVisible] = useState(false)
+  const midnightTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
     if (!show) return
@@ -55,6 +56,11 @@ export default function NotificationPopup({ show }: NotificationPopupProps) {
   }
 
   function scheduleMidnightNotification() {
+    // Clear any existing timeout to prevent memory leaks
+    if (midnightTimeoutRef.current) {
+      clearTimeout(midnightTimeoutRef.current)
+    }
+    
     const now = new Date()
     const midnight = new Date(
       now.getFullYear(),
@@ -64,7 +70,7 @@ export default function NotificationPopup({ show }: NotificationPopupProps) {
     )
     const ms = midnight.getTime() - now.getTime()
 
-    setTimeout(() => {
+    midnightTimeoutRef.current = setTimeout(() => {
       if (Notification.permission === 'granted') {
         new Notification('Pehchaan Kaun? 🇮🇳', {
           body: 'Aaj ka naya puzzle ready hai! Kya tum pehchaan sakte ho? 🔥',
@@ -74,6 +80,15 @@ export default function NotificationPopup({ show }: NotificationPopupProps) {
       }
     }, ms)
   }
+
+  // Cleanup on unmount to prevent memory leaks
+  useEffect(() => {
+    return () => {
+      if (midnightTimeoutRef.current) {
+        clearTimeout(midnightTimeoutRef.current)
+      }
+    }
+  }, [])
 
   if (!visible) return null
 

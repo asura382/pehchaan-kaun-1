@@ -29,13 +29,44 @@ export function getStats(): Stats {
     return getDefaultStats()
   }
   
-  const saved = localStorage.getItem(STORAGE_KEY)
-  return saved ? JSON.parse(saved) : getDefaultStats()
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY)
+    if (!saved) return getDefaultStats()
+    
+    const parsed = JSON.parse(saved)
+    // Validate required fields
+    if (!parsed || typeof parsed !== 'object') {
+      return getDefaultStats()
+    }
+    
+    return {
+      currentStreak: parsed.currentStreak ?? 0,
+      maxStreak: parsed.maxStreak ?? 0,
+      totalPlayed: parsed.totalPlayed ?? 0,
+      totalWon: parsed.totalWon ?? 0,
+      lastPlayedDate: parsed.lastPlayedDate ?? null,
+      lastPuzzleIndex: parsed.lastPuzzleIndex ?? -1,
+      lastResult: parsed.lastResult ?? null,
+      lastStreakDate: parsed.lastStreakDate ?? null
+    }
+  } catch (error) {
+    console.error('Error loading stats:', error)
+    return getDefaultStats()
+  }
 }
 
 export function saveStats(stats: Stats): void {
   if (typeof window === 'undefined') return
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(stats))
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(stats))
+  } catch (error) {
+    if (error instanceof DOMException && error.name === 'QuotaExceededError') {
+      console.warn('LocalStorage quota exceeded, clearing old data...')
+      localStorage.removeItem(STORAGE_KEY)
+    } else {
+      console.error('Error saving stats:', error)
+    }
+  }
 }
 
 export function updateStatsAfterGame(
