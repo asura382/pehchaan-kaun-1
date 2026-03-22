@@ -1697,6 +1697,7 @@ export const puzzles: Puzzle[] = [
       "I was one of the first two people to reach the summit of Everest",
       "I summited Everest with Edmund Hillary in 1953",
       "The Tenzing Norgay National Adventure Award is named after me"
+    ]
   },
   {
     answer: "Prithviraj Chauhan",
@@ -1917,7 +1918,7 @@ export const puzzles: Puzzle[] = [
       "I shot and killed Michael O Dwyer in London in 1940",
       "They call me Shaheed-e-Azam Udham Singh"
     ]
-  }  },
+  },
   {
     answer: "Reserve Bank of India",
     category: "Indian Institution",
@@ -2137,7 +2138,7 @@ export const puzzles: Puzzle[] = [
       "I promote transparency and accountability in government",
       "Aruna Roy and Anna Hazare campaigned strongly for me"
     ]
-  }  },
+  },
   {
     answer: "Champaran Satyagraha",
     category: "Indian History",
@@ -2412,7 +2413,7 @@ export const puzzles: Puzzle[] = [
       "I follows the principle of one nation one tax",
       "I is a destination based consumption tax"
     ]
-  }  },
+  },
   {
     answer: "Indus Valley Civilisation",
     category: "Ancient Indian History",
