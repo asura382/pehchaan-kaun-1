@@ -38,10 +38,11 @@ export default function Home() {
     const { puzzle, index } = getTodayPuzzle(puzzles)
     setCurrentPuzzle(puzzle)
     setPuzzleIndex(index)
-    setStats(getStats())
     
-    // Check if already played today
-    if (hasPlayedToday(index)) {
+    const played = hasPlayedToday(index)
+    console.log('Has played today:', played, 'Index:', index)
+    
+    if (played) {
       const savedStats = getStats()
       if (savedStats.lastResult) {
         setGameWon(savedStats.lastResult.won)
@@ -114,6 +115,14 @@ export default function Home() {
       const earnedBadges = checkNewBadges(currentStats, currentClueIndex + 1, true, currentPuzzle.category)
       
       updateStatsAfterGame(true, currentClueIndex + 1, puzzleIndex, currentPuzzle.category, earnedBadges)
+      
+      // Verify it saved
+      const saved = JSON.parse(localStorage.getItem('pehchaanKaunStats') || '{}')
+      console.log('Saved lastPlayedDate:', saved.lastPlayedDate)
+      console.log('Saved lastPuzzleIndex:', saved.lastPuzzleIndex)
+      console.log('Today:', new Date().toDateString())
+      console.log('Index matches:', saved.lastPuzzleIndex === puzzleIndex)
+      
       setStats(getStats())
       setGameFinished(true)
       
@@ -161,6 +170,14 @@ export default function Home() {
             const earnedBadges = checkNewBadges(currentStats, 5, false, currentPuzzle.category)
             
             updateStatsAfterGame(false, 5, puzzleIndex, currentPuzzle.category, earnedBadges)
+            
+            // Verify it saved
+            const saved = JSON.parse(localStorage.getItem('pehchaanKaunStats') || '{}')
+            console.log('Saved lastPlayedDate:', saved.lastPlayedDate)
+            console.log('Saved lastPuzzleIndex:', saved.lastPuzzleIndex)
+            console.log('Today:', new Date().toDateString())
+            console.log('Index matches:', saved.lastPuzzleIndex === puzzleIndex)
+            
             setStats(getStats())
             setFeedback(null)
             setShowLoadingText(false)

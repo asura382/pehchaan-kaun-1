@@ -93,15 +93,10 @@ export function updateStatsAfterGame(
   const stats = getStats()
   const today = new Date().toDateString()
   
-  // Prevent double counting if called twice
-  if (stats.lastPlayedDate === today && stats.lastPuzzleIndex === puzzleIndex) {
-    return stats
-  }
-  
   // Always increment totalPlayed
   stats.totalPlayed++
   
-  // Save played info immediately
+  // Save played info immediately - MUST happen every time
   stats.lastPlayedDate = today
   stats.lastPuzzleIndex = puzzleIndex
   stats.lastResult = { won, cluesUsed }
@@ -170,14 +165,27 @@ export function hasPlayedToday(puzzleIndex: number): boolean {
   try {
     if (typeof window === 'undefined') return false
     const raw = localStorage.getItem('pehchaanKaunStats')
-    if (!raw) return false
+    if (!raw) {
+      console.log('No stats found in localStorage')
+      return false
+    }
     const stats = JSON.parse(raw)
     const today = new Date().toDateString()
-    return (
+    
+    console.log('Checking hasPlayedToday:')
+    console.log('today:', today)
+    console.log('lastPlayedDate:', stats.lastPlayedDate)
+    console.log('puzzleIndex:', puzzleIndex)
+    console.log('lastPuzzleIndex:', stats.lastPuzzleIndex)
+    
+    const result = (
       stats.lastPlayedDate === today &&
-      stats.lastPuzzleIndex === puzzleIndex
+      Number(stats.lastPuzzleIndex) === Number(puzzleIndex)
     )
-  } catch {
+    console.log('hasPlayedToday result:', result)
+    return result
+  } catch (e) {
+    console.error('hasPlayedToday error:', e)
     return false
   }
 }
