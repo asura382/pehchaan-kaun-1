@@ -1,3 +1,5 @@
+import { Badge } from './badges'
+
 export interface Stats {
   currentStreak: number
   maxStreak: number
@@ -7,6 +9,10 @@ export interface Stats {
   lastPuzzleIndex: number
   lastResult: { won: boolean; cluesUsed: number } | null
   lastStreakDate: string | null
+  earnedBadges: string[]
+  oneClueWins: number
+  categoryWins: Record<string, number>
+  consecutiveLosses: number
 }
 
 const STORAGE_KEY = 'pehchaanKaunStats'
@@ -20,7 +26,11 @@ function getDefaultStats(): Stats {
     lastPlayedDate: null,
     lastPuzzleIndex: -1,
     lastResult: null,
-    lastStreakDate: null
+    lastStreakDate: null,
+    earnedBadges: [],
+    oneClueWins: 0,
+    categoryWins: {},
+    consecutiveLosses: 0
   }
 }
 
@@ -47,7 +57,11 @@ export function getStats(): Stats {
       lastPlayedDate: parsed.lastPlayedDate ?? null,
       lastPuzzleIndex: parsed.lastPuzzleIndex ?? -1,
       lastResult: parsed.lastResult ?? null,
-      lastStreakDate: parsed.lastStreakDate ?? null
+      lastStreakDate: parsed.lastStreakDate ?? null,
+      earnedBadges: parsed.earnedBadges ?? [],
+      oneClueWins: parsed.oneClueWins ?? 0,
+      categoryWins: parsed.categoryWins ?? {},
+      consecutiveLosses: parsed.consecutiveLosses ?? 0
     }
   } catch (error) {
     console.error('Error loading stats:', error)
@@ -72,7 +86,9 @@ export function saveStats(stats: Stats): void {
 export function updateStatsAfterGame(
   won: boolean,
   cluesUsed: number,
-  puzzleIndex: number
+  puzzleIndex: number,
+  puzzleCategory?: string,
+  newBadges?: Badge[]
 ): Stats {
   const stats = getStats()
   const today = new Date().toDateString()
@@ -107,8 +123,43 @@ export function updateStatsAfterGame(
     if (stats.currentStreak > stats.maxStreak) {
       stats.maxStreak = stats.currentStreak
     }
+    
+    // Track one clue wins
+    if (cluesUsed === 1) {
+      stats.oneClueWins = (stats.oneClueWins || 0) + 1
+    }
+    
+    // Track category wins
+    if (puzzleCategory) {
+      const cat = puzzleCategory.toLowerCase()
+      let catKey = 'other'
+      if (cat.includes('freedom')) catKey = 'freedom'
+      else if (cat.includes('cricket')) catKey = 'cricket'
+      else if (cat.includes('bollywood')) catKey = 'bollywood'
+      else if (cat.includes('scientist') || cat.includes('science')) catKey = 'science'
+      else if (cat.includes('history') || cat.includes('ruler') || 
+               cat.includes('ancient') || cat.includes('medieval')) catKey = 'history'
+      else if (cat.includes('sport')) catKey = 'sports'
+      else if (cat.includes('musician') || cat.includes('singer')) catKey = 'music'
+      else if (cat.includes('politician')) catKey = 'politics'
+      else if (cat.includes('filmmaker')) catKey = 'films'
+      else if (cat.includes('governance') || cat.includes('constitution')) catKey = 'governance'
+
+      stats.categoryWins = stats.categoryWins || {}
+      stats.categoryWins[catKey] = (stats.categoryWins[catKey] || 0) + 1
+    }
+    
+    // Reset consecutive losses on win
+    stats.consecutiveLosses = 0
   } else {
     stats.currentStreak = 0
+    // Track consecutive losses
+    stats.consecutiveLosses = (stats.consecutiveLosses || 0) + 1
+  }
+  
+  // Save new badges
+  if (newBadges && newBadges.length > 0) {
+    stats.earnedBadges = [...(stats.earnedBadges || []), ...newBadges.map(b => b.id)]
   }
   
   saveStats(stats)

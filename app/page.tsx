@@ -4,9 +4,11 @@ import React, { useState, useEffect, useRef } from 'react'
 import { puzzles, Puzzle } from '../data/puzzles'
 import { getTodayPuzzle, checkGuess, getNextPuzzleTime, formatTime, getEmojiGrid } from '../lib/gameUtils'
 import { Stats, getStats, updateStatsAfterGame, hasPlayedToday } from '../lib/statsUtils'
+import { Badge, checkNewBadges } from '../lib/badges'
 import ResultCard from '../components/ResultCard'
 import InstallPrompt from '../components/InstallPrompt'
 import NotificationPopup from '../components/NotificationPopup'
+import BadgePopup from '../components/BadgePopup'
 import confetti from 'canvas-confetti'
 
 export default function Home() {
@@ -20,11 +22,13 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false)
   const [feedback, setFeedback] = useState<{ type: 'correct' | 'wrong' | 'hint'; message: string } | null>(null)
   const [showLoadingText, setShowLoadingText] = useState(false)
-  const [stats, setStats] = useState<Stats>({ currentStreak: 0, maxStreak: 0, totalPlayed: 0, totalWon: 0, lastPlayedDate: null, lastPuzzleIndex: -1, lastResult: null, lastStreakDate: null })
+  const [stats, setStats] = useState<Stats>({ currentStreak: 0, maxStreak: 0, totalPlayed: 0, totalWon: 0, lastPlayedDate: null, lastPuzzleIndex: -1, lastResult: null, lastStreakDate: null, earnedBadges: [], oneClueWins: 0, categoryWins: {}, consecutiveLosses: 0 })
   const [timeUntilNext, setTimeUntilNext] = useState(getNextPuzzleTime())
   const [showHowToPlay, setShowHowToPlay] = useState(false)
   const [showStats, setShowStats] = useState(false)
   const [gameFinished, setGameFinished] = useState(false)
+  const [newBadges, setNewBadges] = useState<Badge[]>([])
+  const [showBadgePopup, setShowBadgePopup] = useState(false)
 
   const inputRef = useRef<HTMLInputElement>(null)
   const btnRef = useRef<HTMLButtonElement>(null)
@@ -103,9 +107,20 @@ export default function Home() {
       setFeedback({ type: 'correct', message: `✅ Sahi Jawab! It's ${currentPuzzle.answer}!` })
       setGameWon(true)
       setGameOver(true)
-      updateStatsAfterGame(true, currentClueIndex + 1, puzzleIndex)
+      
+      // Check for new badges before updating stats
+      const currentStats = getStats()
+      const earnedBadges = checkNewBadges(currentStats, currentClueIndex + 1, true, currentPuzzle.category)
+      
+      updateStatsAfterGame(true, currentClueIndex + 1, puzzleIndex, currentPuzzle.category, earnedBadges)
       setStats(getStats())
       setGameFinished(true)
+      
+      // Show badge popup if new badges earned
+      if (earnedBadges.length > 0) {
+        setNewBadges(earnedBadges)
+        setShowBadgePopup(true)
+      }
       
       setTimeout(() => {
         setFeedback(null)
@@ -139,11 +154,22 @@ export default function Home() {
           // Game over
           setTimeout(() => {
             setGameOver(true)
-            updateStatsAfterGame(false, 5, puzzleIndex)
+            
+            // Check for new badges even on loss (comeback king)
+            const currentStats = getStats()
+            const earnedBadges = checkNewBadges(currentStats, 5, false, currentPuzzle.category)
+            
+            updateStatsAfterGame(false, 5, puzzleIndex, currentPuzzle.category, earnedBadges)
             setStats(getStats())
             setFeedback(null)
             setShowLoadingText(false)
             setGameFinished(true)
+            
+            // Show badge popup if new badges earned
+            if (earnedBadges.length > 0) {
+              setNewBadges(earnedBadges)
+              setShowBadgePopup(true)
+            }
           }, 1000)
         } else {
           // Show next clue
@@ -279,6 +305,15 @@ export default function Home() {
 
       <InstallPrompt />
       <NotificationPopup show={gameFinished} />
+      {showBadgePopup && (
+        <BadgePopup 
+          badges={newBadges} 
+          onClose={() => {
+            setShowBadgePopup(false)
+            setNewBadges([])
+          }} 
+        />
+      )}
 
       {/* Puzzle Info */}
       <div style={{ 
