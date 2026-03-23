@@ -366,6 +366,22 @@ export default function Home() {
             fontSize: '1.2rem',
             transition: 'all 0.3s ease'
           }}>📊</button>
+          
+          <button
+            onClick={() => window.location.href = '/profile'}
+            title="My Profile"
+            style={{
+              background: 'rgba(255,255,255,0.1)',
+              border: '1px solid rgba(255,255,255,0.15)',
+              color: '#fff',
+              width: '40px',
+              height: '40px',
+              borderRadius: '50%',
+              cursor: 'pointer',
+              fontSize: '1.2rem',
+              transition: 'all 0.3s ease'
+            }}
+          >👤</button>
         </div>
       </header>
 
