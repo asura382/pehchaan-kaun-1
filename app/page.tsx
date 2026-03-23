@@ -10,6 +10,9 @@ import InstallPrompt from '../components/InstallPrompt'
 import NotificationPopup from '../components/NotificationPopup'
 import BadgePopup from '../components/BadgePopup'
 import BadgeShelf from '../components/BadgeShelf'
+import ChallengeButton from '@/components/ChallengeButton'
+import ChallengeBanner from '@/components/ChallengeBanner'
+import UsernameModal from '@/components/UsernameModal'
 import confetti from 'canvas-confetti'
 
 export default function Home() {
@@ -30,11 +33,41 @@ export default function Home() {
   const [gameFinished, setGameFinished] = useState(false)
   const [newBadges, setNewBadges] = useState<Badge[]>([])
   const [showBadgePopup, setShowBadgePopup] = useState(false)
+  const [username, setUsername] = useState('')
+  const [showUsernameModal, setShowUsernameModal] = useState(false)
+  const [challengeData, setChallengeData] = useState<{
+    challengerName: string
+    challengerScore: number
+    challengerWon: boolean
+    puzzleIndex: number
+  } | null>(null)
 
   const inputRef = useRef<HTMLInputElement>(null)
   const btnRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
+    // Load username from localStorage
+    const saved = localStorage.getItem('pkUsername')
+    if (saved) setUsername(saved)
+
+    // Check for challenge URL params
+    const params = new URLSearchParams(window.location.search)
+    const challenge = params.get('challenge')
+    const challenger = params.get('challenger')
+    const score = params.get('score')
+    const won = params.get('won')
+
+    if (challenge && challenger && score) {
+      setChallengeData({
+        challengerName: challenger,
+        challengerScore: parseInt(score),
+        challengerWon: won === '1',
+        puzzleIndex: parseInt(challenge)
+      })
+      // Clear URL params without reload
+      window.history.replaceState({}, '', window.location.pathname)
+    }
+
     const { puzzle, index } = getTodayPuzzle(puzzles)
     setCurrentPuzzle(puzzle)
     setPuzzleIndex(index)
@@ -333,6 +366,11 @@ export default function Home() {
         />
       )}
 
+      {/* Challenge Banner */}
+      {challengeData && (
+        <ChallengeBanner {...challengeData} />
+      )}
+
       {/* Puzzle Info */}
       <div style={{ 
         display: 'flex', 
@@ -482,14 +520,27 @@ export default function Home() {
         </>
       ) : (
         /* Result */
-        <ResultCard
-          answer={currentPuzzle.answer}
-          category={currentPuzzle.category}
-          puzzleIndex={puzzleIndex}
-          won={gameWon}
-          cluesUsed={gameWon ? currentClueIndex + 1 : 5}
-          stats={stats}
-        />
+        <>
+          <ResultCard
+            answer={currentPuzzle.answer}
+            category={currentPuzzle.category}
+            puzzleIndex={puzzleIndex}
+            won={gameWon}
+            cluesUsed={gameWon ? currentClueIndex + 1 : 5}
+            stats={stats}
+          />
+          
+          {/* Challenge Friend Button */}
+          <div style={{ maxWidth: '480px', margin: '20px auto' }}>
+            <ChallengeButton
+              puzzleIndex={puzzleIndex}
+              cluesUsed={gameWon ? currentClueIndex + 1 : 5}
+              won={gameWon}
+              username={username}
+              onUsernameSet={(name) => setUsername(name)}
+            />
+          </div>
+        </>
       )}
 
       {/* How to Play Modal */}

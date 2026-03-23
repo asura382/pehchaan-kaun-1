@@ -21,7 +21,7 @@ export default function ResultCard({
   puzzleIndex, 
   won, 
   cluesUsed, 
-  stats 
+  stats
 }: ResultCardProps) {
   const cardRef = useRef<HTMLDivElement>(null)
 
