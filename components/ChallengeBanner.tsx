@@ -5,11 +5,12 @@ interface ChallengeBannerProps {
   challengerScore: number
   challengerWon: boolean
   puzzleIndex: number
+  challengerId?: string
 }
 
 export default function ChallengeBanner({
   challengerName, challengerScore,
-  challengerWon, puzzleIndex
+  challengerWon, puzzleIndex, challengerId
 }: ChallengeBannerProps) {
   return (
     <div style={{
@@ -24,7 +25,7 @@ export default function ChallengeBanner({
         fontSize: '1.1rem', fontWeight: '800',
         color: '#fff', marginBottom: '4px'
       }}>
-        {challengerName} ne challenge kiya!
+        {challengerName}{challengerId ? ` (${challengerId})` : ''} ne challenge kiya!
       </div>
       <div style={{ fontSize: '0.85rem', color: '#aaa' }}>
         Unhone Puzzle #{puzzleIndex + 1} ko{' '}

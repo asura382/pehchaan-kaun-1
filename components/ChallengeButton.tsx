@@ -7,11 +7,12 @@ interface ChallengeButtonProps {
   cluesUsed: number
   won: boolean
   username: string
+  playerId?: string
   onUsernameSet: (name: string) => void
 }
 
 export default function ChallengeButton({
-  puzzleIndex, cluesUsed, won, username, onUsernameSet
+  puzzleIndex, cluesUsed, won, username, playerId, onUsernameSet
 }: ChallengeButtonProps) {
   const [showUsernameModal, setShowUsernameModal] = useState(false)
   const [copied, setCopied] = useState(false)
@@ -21,6 +22,7 @@ export default function ChallengeButton({
     const params = new URLSearchParams({
       challenge: puzzleIndex.toString(),
       challenger: name,
+      challengerId: playerId || '',
       score: cluesUsed.toString(),
       won: won ? '1' : '0'
     })
@@ -40,7 +42,8 @@ export default function ChallengeButton({
     const scoreText = won
       ? `${cluesUsed}/5 clues mein pehchana 🎯`
       : 'nahi pehchana 😔'
-    const text = `${name} ne tumhe Pehchaan Kaun challenge kiya! 🇮🇳\n\nUnhone Puzzle #${puzzleIndex + 1} ko ${scoreText}\nKya tum beat kar sakte ho? 👇\n${url}`
+    const playerIdText = playerId ? ` (${playerId})` : ''
+    const text = `${name}${playerIdText} ne tumhe Pehchaan Kaun challenge kiya! 🇮🇳\n\nUnhone Puzzle #${puzzleIndex + 1} ko ${scoreText}\nKya tum beat kar sakte ho? 👇\n${url}`
 
     if (navigator.share) {
       navigator.share({ text })

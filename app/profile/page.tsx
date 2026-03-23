@@ -7,6 +7,7 @@ import { ALL_BADGES, getRarityColor } from '@/lib/badges'
 export default function ProfilePage() {
   const [stats, setStats] = useState<any>(null)
   const [username, setUsername] = useState('')
+  const [playerId, setPlayerId] = useState('')
   const [editingName, setEditingName] = useState(false)
   const [newName, setNewName] = useState('')
   const [isGenerating, setIsGenerating] = useState(false)
@@ -24,6 +25,10 @@ export default function ProfilePage() {
     const name = localStorage.getItem('pkUsername') || 'Pehchaan Master'
     setUsername(name)
     setNewName(name)
+    
+    // Load Player ID
+    const id = localStorage.getItem('pkPlayerId') || 'Not Generated'
+    setPlayerId(id)
   }, [])
 
   const earnedBadges = stats
@@ -67,7 +72,7 @@ export default function ProfilePage() {
     await handleDownload()
     const text = encodeURIComponent(
       `Dekho meri Pehchaan Kaun profile! 🇮🇳\n` +
-      `${username}\n` +
+      `${username} (${playerId})\n` +
       `🔥 Streak: ${stats?.currentStreak || 0} din\n` +
       `🏆 Win Rate: ${winRate}%\n` +
       `🎖️ Badges: ${earnedBadges.length}/${ALL_BADGES.length}\n` +
@@ -143,6 +148,19 @@ export default function ProfilePage() {
             color: '#fff', marginBottom: '4px'
           }}>
             {username}
+          </div>
+
+          {/* Player ID */}
+          <div style={{
+            fontSize: '11px', color: '#94a3b8',
+            fontFamily: 'monospace',
+            background: 'rgba(255,255,255,0.05)',
+            padding: '6px 12px',
+            borderRadius: '6px',
+            display: 'inline-block',
+            marginBottom: '8px'
+          }}>
+            🎮 {playerId}
           </div>
 
           <div style={{

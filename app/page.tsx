@@ -37,12 +37,14 @@ export default function Home() {
   const [newBadges, setNewBadges] = useState<Badge[]>([])
   const [showBadgePopup, setShowBadgePopup] = useState(false)
   const [username, setUsername] = useState('')
+  const [playerId, setPlayerId] = useState('')
   const [showUsernameModal, setShowUsernameModal] = useState(false)
   const [challengeData, setChallengeData] = useState<{
     challengerName: string
     challengerScore: number
     challengerWon: boolean
     puzzleIndex: number
+    challengerId?: string
   } | null>(null)
 
   const inputRef = useRef<HTMLInputElement>(null)
@@ -52,6 +54,31 @@ export default function Home() {
     // Load username from localStorage
     const saved = localStorage.getItem('pkUsername')
     if (saved) setUsername(saved)
+    
+    // Load or generate unique Player ID
+    const savedPlayerId = localStorage.getItem('pkPlayerId')
+    if (savedPlayerId) {
+      setPlayerId(savedPlayerId)
+    } else {
+      // Generate new unique Player ID: PK-M9B2K4-X3F7
+      const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+      let id = 'PK-'
+      
+      // First part: 6 characters
+      for (let i = 0; i < 6; i++) {
+        id += chars.charAt(Math.floor(Math.random() * chars.length))
+      }
+      id += '-'
+      
+      // Second part: 4 characters
+      for (let i = 0; i < 4; i++) {
+        id += chars.charAt(Math.floor(Math.random() * chars.length))
+      }
+      
+      setPlayerId(id)
+      localStorage.setItem('pkPlayerId', id)
+      console.log('Generated new Player ID:', id)
+    }
 
     // Check for challenge URL params
     const params = new URLSearchParams(window.location.search)
@@ -59,13 +86,15 @@ export default function Home() {
     const challenger = params.get('challenger')
     const score = params.get('score')
     const won = params.get('won')
+    const challengerId = params.get('challengerId')
 
     if (challenge && challenger && score) {
       setChallengeData({
         challengerName: challenger,
         challengerScore: parseInt(score),
         challengerWon: won === '1',
-        puzzleIndex: parseInt(challenge)
+        puzzleIndex: parseInt(challenge),
+        challengerId: challengerId || undefined
       })
       // Clear URL params without reload
       window.history.replaceState({}, '', window.location.pathname)
@@ -643,6 +672,7 @@ export default function Home() {
               cluesUsed={gameWon ? currentClueIndex + 1 : 5}
               won={gameWon}
               username={username}
+              playerId={playerId}
               onUsernameSet={(name) => setUsername(name)}
             />
           </div>
