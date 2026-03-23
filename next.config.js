@@ -19,6 +19,9 @@ const nextConfig = {
   turbopack: {
     root: './'
   },
+  experimental: {
+    missingSuspenseWithCSRBailout: false
+  },
   // Security headers
   async headers() {
     return [

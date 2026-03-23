@@ -32,11 +32,14 @@ export default function ProfilePage() {
   }, [])
 
   const earnedBadges = stats
-    ? ALL_BADGES.filter(b => (stats.earnedBadges || []).includes(b.id))
+    ? ALL_BADGES.filter(b => 
+        Array.isArray(stats.earnedBadges) && 
+        stats.earnedBadges.includes(b.id)
+      )
     : []
 
-  console.log('Profile - Earned badges:', earnedBadges)
-  console.log('Profile - All badge IDs from stats:', stats?.earnedBadges)
+  console.log('Profile - stats:', stats)
+  console.log('Profile - earnedBadges:', stats?.earnedBadges)
 
   const winRate = stats && stats.totalPlayed > 0
     ? Math.round((stats.totalWon / stats.totalPlayed) * 100)

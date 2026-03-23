@@ -1,9 +1,24 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+let supabaseInstance: SupabaseClient | null = null
 
-export const supabase = createClient(supabaseUrl, supabaseKey)
+function getSupabase(): SupabaseClient | null {
+  if (typeof window === 'undefined') return null
+  
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  
+  if (!url || !key) {
+    console.error('Supabase env variables missing')
+    return null
+  }
+  
+  if (!supabaseInstance) {
+    supabaseInstance = createClient(url, key)
+  }
+  
+  return supabaseInstance
+}
 
 export function getWeekKey(): string {
   const now = new Date()
@@ -20,7 +35,8 @@ export async function submitToLeaderboard(
   displayName: string,
   stats: any
 ): Promise<void> {
-  if (!playerId || !supabaseUrl || !supabaseKey) return
+  const supabase = getSupabase()
+  if (!supabase || !playerId) return
 
   const weekKey = getWeekKey()
   const weeklyWins = stats.weeklyWins?.[weekKey] || 0
@@ -41,22 +57,20 @@ export async function submitToLeaderboard(
         },
         { onConflict: 'player_id,week_key' }
       )
-
-    if (error) {
-      console.error('Leaderboard submit error:', error)
-    } else {
-      console.log('Score submitted to leaderboard successfully')
-    }
+    if (error) console.error('Submit error:', error)
+    else console.log('Score submitted successfully')
   } catch (e) {
-    console.error('Leaderboard error:', e)
+    console.error('Submit error:', e)
   }
 }
 
 export async function getLeaderboard(
   sortBy: 'streak' | 'wins' | 'clue' = 'streak'
 ): Promise<any[]> {
-  const weekKey = getWeekKey()
+  const supabase = getSupabase()
+  if (!supabase) return []
 
+  const weekKey = getWeekKey()
   const sortColumn =
     sortBy === 'streak' ? 'current_streak' :
     sortBy === 'wins' ? 'total_wins_this_week' :
@@ -71,12 +85,12 @@ export async function getLeaderboard(
       .limit(50)
 
     if (error) {
-      console.error('Leaderboard fetch error:', error)
+      console.error('Fetch error:', error)
       return []
     }
     return data || []
   } catch (e) {
-    console.error('Leaderboard fetch error:', e)
+    console.error('Fetch error:', e)
     return []
   }
 }
