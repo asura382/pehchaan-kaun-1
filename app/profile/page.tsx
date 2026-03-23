@@ -14,7 +14,13 @@ export default function ProfilePage() {
 
   useEffect(() => {
     const raw = localStorage.getItem('pehchaanKaunStats')
-    if (raw) setStats(JSON.parse(raw))
+    console.log('Profile page - Raw stats from localStorage:', raw)
+    if (raw) {
+      const parsed = JSON.parse(raw)
+      console.log('Profile page - Parsed stats:', parsed)
+      console.log('Profile page - Earned badge ids:', parsed.earnedBadges)
+      setStats(parsed)
+    }
     const name = localStorage.getItem('pkUsername') || 'Pehchaan Master'
     setUsername(name)
     setNewName(name)
@@ -23,6 +29,9 @@ export default function ProfilePage() {
   const earnedBadges = stats
     ? ALL_BADGES.filter(b => (stats.earnedBadges || []).includes(b.id))
     : []
+
+  console.log('Profile - Earned badges:', earnedBadges)
+  console.log('Profile - All badge IDs from stats:', stats?.earnedBadges)
 
   const winRate = stats && stats.totalPlayed > 0
     ? Math.round((stats.totalWon / stats.totalPlayed) * 100)

@@ -85,37 +85,50 @@ export function saveStats(stats: Stats): void {
 
 export function updateStatsAfterGame(
   won: boolean,
-  cluesUsed: number,
+  cluesUsed: number, 
   puzzleIndex: number,
   puzzleCategory?: string,
   newBadges?: Badge[]
 ): Stats {
-  const stats = getStats()
+  const raw = localStorage.getItem('pehchaanKaunStats')
+  const stats = raw ? JSON.parse(raw) : getDefaultStats()
+  
+  console.log('updateStatsAfterGame called:', {
+    won, cluesUsed, puzzleIndex, puzzleCategory
+  })
+  console.log('Stats before update:', stats)
+  
   const today = new Date().toDateString()
   
-  // Always increment totalPlayed
-  stats.totalPlayed++
+  // Prevent double save - check if already played this puzzle today
+  if (stats.lastPlayedDate === today && 
+      Number(stats.lastPuzzleIndex) === Number(puzzleIndex)) {
+    console.log('Already played this puzzle today - skipping update')
+    return stats
+  }
   
-  // Save played info immediately - MUST happen every time
+  // Always increment totalPlayed
+  stats.totalPlayed = (stats.totalPlayed || 0) + 1
   stats.lastPlayedDate = today
-  stats.lastPuzzleIndex = puzzleIndex
+  stats.lastPuzzleIndex = Number(puzzleIndex)
   stats.lastResult = { won, cluesUsed }
   
   if (won) {
-    stats.totalWon++
-    // Check consecutive streak
+    stats.totalWon = (stats.totalWon || 0) + 1
+    
+    // Streak logic
     const yesterday = new Date()
     yesterday.setDate(yesterday.getDate() - 1)
     const yesterdayString = yesterday.toDateString()
     
-    if (stats.lastStreakDate === yesterdayString) {
-      stats.currentStreak++
+    if (stats.lastStreakDate === yesterdayString || stats.lastStreakDate === today) {
+      stats.currentStreak = (stats.currentStreak || 0) + 1
     } else {
       stats.currentStreak = 1
     }
     stats.lastStreakDate = today
     
-    if (stats.currentStreak > stats.maxStreak) {
+    if (stats.currentStreak > (stats.maxStreak || 0)) {
       stats.maxStreak = stats.currentStreak
     }
     
@@ -125,39 +138,52 @@ export function updateStatsAfterGame(
     }
     
     // Track category wins
+    stats.categoryWins = stats.categoryWins || {}
     if (puzzleCategory) {
       const cat = puzzleCategory.toLowerCase()
-      let catKey = 'other'
-      if (cat.includes('freedom')) catKey = 'freedom'
-      else if (cat.includes('cricket')) catKey = 'cricket'
-      else if (cat.includes('bollywood')) catKey = 'bollywood'
-      else if (cat.includes('scientist') || cat.includes('science')) catKey = 'science'
+      let key = 'other'
+      if (cat.includes('freedom') || cat.includes('freedom fighter')) key = 'freedom'
+      else if (cat.includes('cricket')) key = 'cricket'
+      else if (cat.includes('bollywood')) key = 'bollywood'
+      else if (cat.includes('scientist') || cat.includes('science')) key = 'science'
       else if (cat.includes('history') || cat.includes('ruler') || 
-               cat.includes('ancient') || cat.includes('medieval')) catKey = 'history'
-      else if (cat.includes('sport')) catKey = 'sports'
-      else if (cat.includes('musician') || cat.includes('singer')) catKey = 'music'
-      else if (cat.includes('politician')) catKey = 'politics'
-      else if (cat.includes('filmmaker')) catKey = 'films'
-      else if (cat.includes('governance') || cat.includes('constitution')) catKey = 'governance'
-
-      stats.categoryWins = stats.categoryWins || {}
-      stats.categoryWins[catKey] = (stats.categoryWins[catKey] || 0) + 1
+               cat.includes('ancient') || cat.includes('medieval')) key = 'history'
+      else if (cat.includes('sport')) key = 'sports'
+      else if (cat.includes('musician') || cat.includes('singer')) key = 'music'
+      else if (cat.includes('politician')) key = 'politics'
+      else if (cat.includes('filmmaker')) key = 'films'
+      else if (cat.includes('governance') || cat.includes('constitution')) key = 'governance'
+      
+      stats.categoryWins[key] = (stats.categoryWins[key] || 0) + 1
     }
     
-    // Reset consecutive losses on win
+    // Consecutive losses reset on win
     stats.consecutiveLosses = 0
+    
   } else {
     stats.currentStreak = 0
-    // Track consecutive losses
     stats.consecutiveLosses = (stats.consecutiveLosses || 0) + 1
   }
   
   // Save new badges
   if (newBadges && newBadges.length > 0) {
-    stats.earnedBadges = [...(stats.earnedBadges || []), ...newBadges.map(b => b.id)]
+    stats.earnedBadges = stats.earnedBadges || []
+    const newIds = newBadges.map(b => b.id)
+    // Use Set to avoid duplicates
+    stats.earnedBadges = [...new Set([...stats.earnedBadges, ...newIds])]
+    console.log('New badges earned:', newIds)
+    console.log('All badges now:', stats.earnedBadges)
   }
   
+  console.log('Stats after update:', stats)
+  
+  // SAVE TO LOCALSTORAGE
   saveStats(stats)
+  
+  // Verify it saved
+  const saved = localStorage.getItem('pehchaanKaunStats')
+  console.log('Verified saved stats - totalPlayed:', JSON.parse(saved || '{}').totalPlayed)
+  
   return stats
 }
 

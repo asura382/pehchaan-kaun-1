@@ -158,11 +158,21 @@ export default function Home() {
       setGameWon(true)
       setGameOver(true)
       
-      // Check for new badges before updating stats
-      const currentStats = getStats()
-      const earnedBadges = checkNewBadges(currentStats, currentClueIndex + 1, true, currentPuzzle.category)
+      // Step 1: Update stats first and save to localStorage
+      const updatedStats = updateStatsAfterGame(true, currentClueIndex + 1, puzzleIndex, currentPuzzle.category, [])
       
-      updateStatsAfterGame(true, currentClueIndex + 1, puzzleIndex, currentPuzzle.category, earnedBadges)
+      // Step 2: Check for new badges based on UPDATED stats
+      const earnedBadges = checkNewBadges(updatedStats, currentClueIndex + 1, true, currentPuzzle.category)
+      
+      // Step 3: If new badges earned, save them
+      if (earnedBadges.length > 0) {
+        updatedStats.earnedBadges = [
+          ...(updatedStats.earnedBadges || []),
+          ...earnedBadges.map(b => b.id)
+        ]
+        localStorage.setItem('pehchaanKaunStats', JSON.stringify(updatedStats))
+        console.log('New badges saved to localStorage:', earnedBadges.map(b => b.id))
+      }
       
       // Verify it saved
       const saved = JSON.parse(localStorage.getItem('pehchaanKaunStats') || '{}')
@@ -174,10 +184,12 @@ export default function Home() {
       setStats(getStats())
       setGameFinished(true)
       
-      // Show badge popup if new badges earned
+      // Step 4: Show badge popup after 2 seconds if new badges earned
       if (earnedBadges.length > 0) {
-        setNewBadges(earnedBadges)
-        setShowBadgePopup(true)
+        setTimeout(() => {
+          setNewBadges(earnedBadges)
+          setShowBadgePopup(true)
+        }, 2000)
       }
       
       setTimeout(() => {
@@ -213,11 +225,21 @@ export default function Home() {
           setTimeout(() => {
             setGameOver(true)
             
-            // Check for new badges even on loss (comeback king)
-            const currentStats = getStats()
-            const earnedBadges = checkNewBadges(currentStats, 5, false, currentPuzzle.category)
+            // Step 1: Update stats first
+            const updatedStats = updateStatsAfterGame(false, 5, puzzleIndex, currentPuzzle.category, [])
             
-            updateStatsAfterGame(false, 5, puzzleIndex, currentPuzzle.category, earnedBadges)
+            // Step 2: Check for new badges based on UPDATED stats (comeback king)
+            const earnedBadges = checkNewBadges(updatedStats, 5, false, currentPuzzle.category)
+            
+            // Step 3: If new badges earned, save them
+            if (earnedBadges.length > 0) {
+              updatedStats.earnedBadges = [
+                ...(updatedStats.earnedBadges || []),
+                ...earnedBadges.map(b => b.id)
+              ]
+              localStorage.setItem('pehchaanKaunStats', JSON.stringify(updatedStats))
+              console.log('New badges saved to localStorage:', earnedBadges.map(b => b.id))
+            }
             
             // Verify it saved
             const saved = JSON.parse(localStorage.getItem('pehchaanKaunStats') || '{}')
@@ -260,7 +282,23 @@ export default function Home() {
 
   const openHowToPlay = () => setShowHowToPlay(true)
   const closeHowToPlay = () => setShowHowToPlay(false)
-  const openStats = () => setShowStats(true)
+  const openStats = () => {
+    // Read fresh stats from localStorage every time modal opens
+    const raw = localStorage.getItem('pehchaanKaunStats')
+    const freshStats = raw ? JSON.parse(raw) : {
+      totalPlayed: 0,
+      totalWon: 0,
+      currentStreak: 0,
+      maxStreak: 0,
+      earnedBadges: [],
+      oneClueWins: 0,
+      categoryWins: {},
+      consecutiveLosses: 0
+    }
+    console.log('Stats modal - Stats from localStorage:', freshStats)
+    setStats(freshStats)
+    setShowStats(true)
+  }
   const closeStats = () => setShowStats(false)
 
   const handleNotificationRequest = async () => {
