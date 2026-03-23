@@ -5,7 +5,13 @@ export function getTodayPuzzle(puzzles: Puzzle[]) {
   const localDay = Math.floor(
     (now.getTime() - now.getTimezoneOffset() * 60000) / 86400000
   )
-  return { puzzle: puzzles[localDay % puzzles.length], index: localDay % puzzles.length }
+  const index = localDay % puzzles.length
+  
+  console.log('getTodayPuzzle - localDay:', localDay)
+  console.log('getTodayPuzzle - puzzles.length:', puzzles.length)
+  console.log('getTodayPuzzle - index:', index)
+  
+  return { puzzle: puzzles[index], index }
 }
 
 export function checkGuess(guess: string, answer: string): 'correct' | 'hint' | 'wrong' {

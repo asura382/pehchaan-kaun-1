@@ -109,6 +109,20 @@ export default function Home() {
       setPuzzleIndex(index)
       setIsSpecialPuzzle(true)
       setSpecialPuzzleData({ puzzle, index })
+      
+      console.log('Loaded Sunday puzzle:', puzzle.answer)
+      console.log('Sunday puzzle index:', index)
+      
+      const played = hasPlayedToday(index)
+      console.log('Has played today (Sunday):', played, 'Index:', index)
+      
+      if (played) {
+        const savedStats = getStats()
+        if (savedStats.lastResult) {
+          setGameWon(savedStats.lastResult.won)
+          setGameOver(true)
+        }
+      }
     } else {
       // Regular daily puzzle
       const { puzzle, index } = getTodayPuzzle(puzzles)
@@ -116,16 +130,19 @@ export default function Home() {
       setPuzzleIndex(index)
       setIsSpecialPuzzle(false)
       setSpecialPuzzleData(null)
-    }
-    
-    const played = hasPlayedToday(puzzleIndex)
-    console.log('Has played today:', played, 'Is Special:', isSpecialPuzzle, 'Index:', puzzleIndex)
-    
-    if (played) {
-      const savedStats = getStats()
-      if (savedStats.lastResult) {
-        setGameWon(savedStats.lastResult.won)
-        setGameOver(true)
+      
+      console.log('Loaded puzzle:', puzzle.answer)
+      console.log('Puzzle index:', index)
+      
+      const played = hasPlayedToday(index)
+      console.log('Has played today:', played, 'Index:', index)
+      
+      if (played) {
+        const savedStats = getStats()
+        if (savedStats.lastResult) {
+          setGameWon(savedStats.lastResult.won)
+          setGameOver(true)
+        }
       }
     }
   }, [])
