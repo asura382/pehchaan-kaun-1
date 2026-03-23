@@ -186,6 +186,17 @@ export const ALL_BADGES: Badge[] = [
     emoji: '📖',
     category: 'knowledge',
     rarity: 'epic'
+  },
+
+  // SPECIAL BADGE - Sunday Challenge
+  {
+    id: 'sunday_champion',
+    name: 'Sunday Champion',
+    nameHindi: 'रविवार का चैंपियन',
+    description: 'Complete a Sunday Special Challenge',
+    emoji: '🌟',
+    category: 'special',
+    rarity: 'legendary'
   }
 ]
 
@@ -279,6 +290,11 @@ export function checkNewBadges(
 
     // Comeback king - win after 3 losses
     if ((stats.consecutiveLosses || 0) >= 3) addIfNew('comeback_king')
+
+    // Sunday Champion - complete Sunday challenge
+    if (won && puzzleCategory.includes('Sunday Special')) {
+      addIfNew('sunday_champion')
+    }
   }
 
   return newBadges

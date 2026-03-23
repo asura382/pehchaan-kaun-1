@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { puzzles, Puzzle } from '../data/puzzles'
 import { getTodayPuzzle, checkGuess, getNextPuzzleTime, formatTime, getEmojiGrid } from '../lib/gameUtils'
+import { sundayPuzzles, getSundayPuzzle, isSunday } from '../data/specialPuzzles'
 import { Stats, getStats, updateStatsAfterGame, hasPlayedToday } from '../lib/statsUtils'
 import { Badge, checkNewBadges } from '../lib/badges'
 import ResultCard from '../components/ResultCard'
@@ -18,6 +19,8 @@ import confetti from 'canvas-confetti'
 export default function Home() {
   const [currentPuzzle, setCurrentPuzzle] = useState<Puzzle | null>(null)
   const [puzzleIndex, setPuzzleIndex] = useState<number>(0)
+  const [isSpecialPuzzle, setIsSpecialPuzzle] = useState(false)
+  const [specialPuzzleData, setSpecialPuzzleData] = useState<{ puzzle: any; index: number } | null>(null)
   const [currentClueIndex, setCurrentClueIndex] = useState(0)
   const [guess, setGuess] = useState('')
   const [guesses, setGuesses] = useState<string[]>([])
@@ -68,12 +71,24 @@ export default function Home() {
       window.history.replaceState({}, '', window.location.pathname)
     }
 
-    const { puzzle, index } = getTodayPuzzle(puzzles)
-    setCurrentPuzzle(puzzle)
-    setPuzzleIndex(index)
+    // Check if today is Sunday and load special puzzle
+    if (isSunday()) {
+      const { puzzle, index } = getSundayPuzzle()
+      setCurrentPuzzle(puzzle as Puzzle)
+      setPuzzleIndex(index)
+      setIsSpecialPuzzle(true)
+      setSpecialPuzzleData({ puzzle, index })
+    } else {
+      // Regular daily puzzle
+      const { puzzle, index } = getTodayPuzzle(puzzles)
+      setCurrentPuzzle(puzzle)
+      setPuzzleIndex(index)
+      setIsSpecialPuzzle(false)
+      setSpecialPuzzleData(null)
+    }
     
-    const played = hasPlayedToday(index)
-    console.log('Has played today:', played, 'Index:', index)
+    const played = hasPlayedToday(puzzleIndex)
+    console.log('Has played today:', played, 'Is Special:', isSpecialPuzzle, 'Index:', puzzleIndex)
     
     if (played) {
       const savedStats = getStats()
@@ -371,6 +386,43 @@ export default function Home() {
         <ChallengeBanner {...challengeData} />
       )}
 
+      {/* Sunday Special Banner */}
+      {isSpecialPuzzle && (
+        <div style={{
+          background: 'linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 165, 0, 0.1))',
+          border: '2px solid rgba(255, 215, 0, 0.5)',
+          borderRadius: '16px',
+          padding: '18px 20px',
+          marginBottom: '20px',
+          textAlign: 'center',
+          boxShadow: '0 0 30px rgba(255, 215, 0, 0.3), inset 0 0 20px rgba(255, 215, 0, 0.1)',
+          animation: 'goldenGlow 2s ease-in-out infinite'
+        }}>
+          <div style={{ fontSize: '1.8rem', marginBottom: '8px' }}>🌟</div>
+          <div style={{
+            fontFamily: 'Baloo 2, cursive',
+            fontSize: '1.3rem',
+            fontWeight: '800',
+            color: '#FFD700',
+            marginBottom: '6px',
+            textShadow: '0 0 10px rgba(255, 215, 0, 0.5)'
+          }}>
+            SPECIAL SUNDAY CHALLENGE 🎯
+          </div>
+          <div style={{ fontSize: '0.9rem', color: '#FFF8DC', marginBottom: '8px' }}>
+            Extra cryptic clues • Harder puzzle • Special badge on win!
+          </div>
+          <div style={{
+            fontSize: '0.8rem',
+            color: '#FFA500',
+            fontWeight: '600',
+            fontStyle: 'italic'
+          }}>
+            💡 Hint: Think beyond the obvious - connections are deeper!
+          </div>
+        </div>
+      )}
+
       {/* Puzzle Info */}
       <div style={{ 
         display: 'flex', 
@@ -660,6 +712,17 @@ export default function Home() {
       )}
       
       <NotificationPopup show={gameFinished} />
+
+      <style jsx global>{`
+        @keyframes goldenGlow {
+          0%, 100% {
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3), inset 0 0 20px rgba(255, 215, 0, 0.1);
+          }
+          50% {
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.5), inset 0 0 40px rgba(255, 215, 0, 0.2);
+          }
+        }
+      `}</style>
     </div>
   )
 }
