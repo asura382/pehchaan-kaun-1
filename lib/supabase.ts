@@ -1,5 +1,9 @@
 import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
+console.log('supabase.ts loaded')
+console.log('SUPABASE_URL:', process.env.NEXT_PUBLIC_SUPABASE_URL ? 'EXISTS' : 'MISSING')
+console.log('SUPABASE_KEY:', process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ? 'EXISTS' : 'MISSING')
+
 let supabaseInstance: SupabaseClient | null = null
 
 function getSupabase(): SupabaseClient | null {

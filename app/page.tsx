@@ -175,7 +175,65 @@ export default function Home() {
     }, 250)
   }
 
-  const handleSubmitGuess = () => {
+  const handleGameEnd = async (won: boolean, cluesUsed: number) => {
+    console.log('=== GAME ENDED ===')
+    console.log('Won:', won)
+    console.log('Clues used:', cluesUsed)
+    console.log('Current puzzle:', currentPuzzle?.answer)
+    console.log('Puzzle index:', puzzleIndex)
+
+    // Update stats
+    const updatedStats = updateStatsAfterGame(
+      won, cluesUsed, puzzleIndex,
+      currentPuzzle?.category || '', []
+    )
+    console.log('Stats updated:', updatedStats)
+
+    // Check badges
+    const newBadges = checkNewBadges(
+      updatedStats, cluesUsed, won,
+      currentPuzzle?.category || ''
+    )
+    console.log('New badges:', newBadges)
+
+    if (newBadges.length > 0) {
+      updatedStats.earnedBadges = [
+        ...(updatedStats.earnedBadges || []),
+        ...newBadges.map((b: any) => b.id)
+      ]
+      localStorage.setItem(
+        'pehchaanKaunStats',
+        JSON.stringify(updatedStats)
+      )
+      setTimeout(() => setNewBadges(newBadges), 2000)
+    }
+
+    // Submit to leaderboard
+    try {
+      const { getOrCreatePlayerId, getDisplayName } = 
+        await import('@/lib/playerUtils')
+      const { submitToLeaderboard } = 
+        await import('@/lib/supabase')
+      
+      const playerId = getOrCreatePlayerId()
+      const displayName = getDisplayName() || 'Anonymous'
+      
+      console.log('=== LEADERBOARD SUBMIT ===')
+      console.log('Player ID:', playerId)
+      console.log('Display Name:', displayName)
+      
+      await submitToLeaderboard(
+        playerId, displayName, updatedStats
+      )
+      console.log('Leaderboard submit completed')
+    } catch (e) {
+      console.error('Leaderboard submit error:', e)
+    }
+
+    setGameFinished(true)
+  }
+
+  const handleSubmitGuess = async () => {
     if (!currentPuzzle || isLoading || !guess.trim()) return
 
     setIsLoading(true)
@@ -189,50 +247,13 @@ export default function Home() {
       setGameWon(true)
       setGameOver(true)
       
-      // Step 1: Update stats first and save to localStorage
-      const updatedStats = updateStatsAfterGame(true, currentClueIndex + 1, puzzleIndex, currentPuzzle.category, [])
+      // Call centralized game end handler
+      await handleGameEnd(true, currentClueIndex + 1)
       
-      // Step 2: Check for new badges based on UPDATED stats
-      const earnedBadges = checkNewBadges(updatedStats, currentClueIndex + 1, true, currentPuzzle.category)
-      
-      // Step 3: If new badges earned, save them
-      if (earnedBadges.length > 0) {
-        updatedStats.earnedBadges = [
-          ...(updatedStats.earnedBadges || []),
-          ...earnedBadges.map(b => b.id)
-        ]
-        localStorage.setItem('pehchaanKaunStats', JSON.stringify(updatedStats))
-        console.log('New badges saved to localStorage:', earnedBadges.map(b => b.id))
-      }
-      
-      // Verify it saved
-      const saved = JSON.parse(localStorage.getItem('pehchaanKaunStats') || '{}')
-      console.log('Saved lastPlayedDate:', saved.lastPlayedDate)
-      console.log('Saved lastPuzzleIndex:', saved.lastPuzzleIndex)
-      console.log('Today:', new Date().toDateString())
-      console.log('Index matches:', saved.lastPuzzleIndex === puzzleIndex)
-      
-      setStats(getStats())
-      setGameFinished(true)
-      
-      // Step 3: Submit to leaderboard with debugging
-      const playerIdForSubmit = getOrCreatePlayerId()
-      const displayNameForSubmit = getDisplayName() || 'Anonymous'
-      
-      console.log('Submitting to leaderboard:')
-      console.log('Player ID:', playerIdForSubmit)
-      console.log('Display Name:', displayNameForSubmit)
-      console.log('Stats:', updatedStats)
-      
-      submitToLeaderboard(playerIdForSubmit, displayNameForSubmit, updatedStats)
-        .then(() => console.log('Leaderboard submit done'))
-        .catch(e => console.error('Leaderboard submit failed:', e))
-      
-      // Old code kept for backup - remove after testing
-      // submitToLeaderboard(playerId, username, updatedStats)
-      // console.log('Submitted to leaderboard with Player ID:', playerId)
-      
-      // Step 4: Show badge popup after 2 seconds if new badges earned
+      // Show badge popup after 2 seconds if new badges earned
+      const earnedBadges = checkNewBadges(
+        getStats(), currentClueIndex + 1, true, currentPuzzle.category
+      )
       if (earnedBadges.length > 0) {
         setTimeout(() => {
           setNewBadges(earnedBadges)
@@ -270,55 +291,16 @@ export default function Home() {
         
         if (nextClueIndex >= 5) {
           // Game over
-          setTimeout(() => {
+          setTimeout(async () => {
             setGameOver(true)
             
-            // Step 1: Update stats first
-            const updatedStats = updateStatsAfterGame(false, 5, puzzleIndex, currentPuzzle.category, [])
-            
-            // Step 2: Check for new badges based on UPDATED stats (comeback king)
-            const earnedBadges = checkNewBadges(updatedStats, 5, false, currentPuzzle.category)
-            
-            // Step 3: If new badges earned, save them
-            if (earnedBadges.length > 0) {
-              updatedStats.earnedBadges = [
-                ...(updatedStats.earnedBadges || []),
-                ...earnedBadges.map(b => b.id)
-              ]
-              localStorage.setItem('pehchaanKaunStats', JSON.stringify(updatedStats))
-              console.log('New badges saved to localStorage:', earnedBadges.map(b => b.id))
-            }
-            
-            // Verify it saved
-            const saved = JSON.parse(localStorage.getItem('pehchaanKaunStats') || '{}')
-            console.log('Saved lastPlayedDate:', saved.lastPlayedDate)
-            console.log('Saved lastPuzzleIndex:', saved.lastPuzzleIndex)
-            console.log('Today:', new Date().toDateString())
-            console.log('Index matches:', saved.lastPuzzleIndex === puzzleIndex)
-            
-            setStats(getStats())
-            setFeedback(null)
-            setShowLoadingText(false)
-            setGameFinished(true)
-            
-            // Submit to leaderboard even on loss with debugging
-            const playerIdForSubmitLoss = getOrCreatePlayerId()
-            const displayNameForSubmitLoss = getDisplayName() || 'Anonymous'
-            
-            console.log('Submitting to leaderboard (loss):')
-            console.log('Player ID:', playerIdForSubmitLoss)
-            console.log('Display Name:', displayNameForSubmitLoss)
-            console.log('Stats:', updatedStats)
-            
-            submitToLeaderboard(playerIdForSubmitLoss, displayNameForSubmitLoss, updatedStats)
-              .then(() => console.log('Leaderboard submit done (loss)'))
-              .catch(e => console.error('Leaderboard submit failed (loss):', e))
-            
-            // Old code kept for backup - remove after testing
-            // submitToLeaderboard(playerId, username, updatedStats)
-            // console.log('Submitted to leaderboard with Player ID:', playerId)
+            // Call centralized game end handler
+            await handleGameEnd(false, 5)
             
             // Show badge popup if new badges earned
+            const earnedBadges = checkNewBadges(
+              getStats(), 5, false, currentPuzzle.category
+            )
             if (earnedBadges.length > 0) {
               setNewBadges(earnedBadges)
               setShowBadgePopup(true)

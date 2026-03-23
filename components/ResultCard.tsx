@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import { toPng } from 'html-to-image'
 import confetti from 'canvas-confetti'
 import { Stats } from '../lib/statsUtils'
@@ -24,7 +24,6 @@ export default function ResultCard({
   stats
 }: ResultCardProps) {
   const cardRef = useRef<HTMLDivElement>(null)
-  const [isGenerating, setIsGenerating] = useState(false)
 
   const emojiGrid = getEmojiGrid(won, cluesUsed)
   const scoreDisplay = won ? `${cluesUsed}/5` : '0/5'
@@ -66,71 +65,30 @@ export default function ResultCard({
     }
   }
 
-  const shareWhatsApp = async () => {
-    setIsGenerating(true)
-    const btn = document.querySelector('.whatsapp-share-btn') as HTMLButtonElement
-    if (btn) btn.textContent = '⏳ Preparing...'
+  const shareWhatsApp = () => {
+    const scoreMsg = won
+      ? `${cluesUsed}/5 clues mein pehchana! 🎉`
+      : 'Nahi pehchana 😔'
 
-    try {
-      const scoreMsg = won ? `Got it in ${cluesUsed} clue${cluesUsed > 1 ? 's' : ''}! 🎉` : 'Game Over 😔'
-      const shareText = 
-        `Pehchaan Kaun? 🇮🇳 #${puzzleIndex + 1}\n` +
-        `Category: ${category}\n` +
-        `${emojiGrid}\n` +
-        `${scoreMsg}\n` +
-        `Play at: pehchaankaun.vercel.app`
-
-      // Check if mobile with Web Share API support
-      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
-
-      if (isMobile && navigator.share) {
-        // Try to share with image on mobile
-        try {
-          if (cardRef.current) {
-            const dataUrl = await toPng(cardRef.current, {
-              quality: 1.0,
-              pixelRatio: 2,
-              backgroundColor: '#0f172a'
-            })
-            const res = await fetch(dataUrl)
-            const blob = await res.blob()
-            const file = new File([blob], 'pehchaan-kaun.png', { type: 'image/png' })
-            
-            if (navigator.canShare && navigator.canShare({ files: [file] })) {
-              await navigator.share({
-                files: [file],
-                text: shareText
-              })
-            } else {
-              // Share text only if files not supported
-              await navigator.share({ text: shareText })
-            }
-          } else {
-            await navigator.share({ text: shareText })
-          }
-        } catch (shareError: any) {
-          // User cancelled - do nothing
-          if (shareError.name !== 'AbortError') {
-            console.error('Share error:', shareError)
-          }
-        }
-      } else {
-        // Desktop - open WhatsApp Web with text only
-        // No download on desktop
-        const encoded = encodeURIComponent(shareText)
-        window.open(`https://wa.me/?text=${encoded}`, '_blank')
-      }
-    } catch (e) {
-      console.error('WhatsApp share error:', e)
-      // Fallback
-      const fallbackShareText = 
-        `Pehchaan Kaun? 🇮🇳 #${puzzleIndex + 1}\n` +
-        `pehchaankaun.vercel.app`
-      window.open(`https://wa.me/?text=${encodeURIComponent(fallbackShareText)}`, '_blank')
-    } finally {
-      setIsGenerating(false)
-      if (btn) btn.textContent = '📱 WhatsApp'
+    let emojiGrid = ''
+    for (let i = 0; i < 5; i++) {
+      if (won && i === cluesUsed - 1) emojiGrid += '🟩'
+      else if (i < cluesUsed - (won ? 1 : 0)) emojiGrid += '🟥'
+      else emojiGrid += '⬜'
     }
+
+    const text = 
+      `Pehchaan Kaun? 🇮🇳 #${puzzleIndex + 1}\n` +
+      `Category: ${category}\n` +
+      `${emojiGrid}\n` +
+      `${scoreMsg}\n` +
+      `Play at: pehchaankaun.vercel.app`
+
+    const encoded = encodeURIComponent(text)
+    const url = `https://wa.me/?text=${encoded}`
+    
+    console.log('Opening WhatsApp:', url)
+    window.open(url, '_blank')
   }
 
   const copyText = () => {
