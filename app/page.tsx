@@ -6,6 +6,7 @@ import { getTodayPuzzle, checkGuess, getNextPuzzleTime, formatTime, getEmojiGrid
 import { sundayPuzzles, getSundayPuzzle, isSunday } from '../data/specialPuzzles'
 import { Stats, getStats, updateStatsAfterGame, hasPlayedToday } from '../lib/statsUtils'
 import { Badge, checkNewBadges } from '../lib/badges'
+import { submitToLeaderboard } from '@/lib/supabase'
 import ResultCard from '../components/ResultCard'
 import InstallPrompt from '../components/InstallPrompt'
 import NotificationPopup from '../components/NotificationPopup'
@@ -213,6 +214,10 @@ export default function Home() {
       setStats(getStats())
       setGameFinished(true)
       
+      // Submit to leaderboard
+      submitToLeaderboard(playerId, username, updatedStats)
+      console.log('Submitted to leaderboard with Player ID:', playerId)
+      
       // Step 4: Show badge popup after 2 seconds if new badges earned
       if (earnedBadges.length > 0) {
         setTimeout(() => {
@@ -281,6 +286,10 @@ export default function Home() {
             setFeedback(null)
             setShowLoadingText(false)
             setGameFinished(true)
+            
+            // Submit to leaderboard even on loss
+            submitToLeaderboard(playerId, username, updatedStats)
+            console.log('Submitted to leaderboard with Player ID:', playerId)
             
             // Show badge popup if new badges earned
             if (earnedBadges.length > 0) {
@@ -449,6 +458,22 @@ export default function Home() {
               transition: 'all 0.3s ease'
             }}
           >👤</button>
+          
+          <button
+            onClick={() => window.location.href = '/leaderboard'}
+            title="Leaderboard"
+            style={{
+              background: 'rgba(255,255,255,0.1)',
+              border: '1px solid rgba(255,255,255,0.15)',
+              color: '#fff',
+              width: '40px',
+              height: '40px',
+              borderRadius: '50%',
+              cursor: 'pointer',
+              fontSize: '1.2rem',
+              transition: 'all 0.3s ease'
+            }}
+          >🏆</button>
         </div>
       </header>
 
