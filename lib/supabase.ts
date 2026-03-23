@@ -8,13 +8,17 @@ function getSupabase(): SupabaseClient | null {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL
   const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
   
+  console.log('Supabase URL exists:', !!url)
+  console.log('Supabase KEY exists:', !!key)
+  
   if (!url || !key) {
-    console.error('Supabase env variables missing')
+    console.error('Missing env vars:', { url: !!url, key: !!key })
     return null
   }
   
   if (!supabaseInstance) {
     supabaseInstance = createClient(url, key)
+    console.log('Created new Supabase instance')
   }
   
   return supabaseInstance
@@ -35,32 +39,54 @@ export async function submitToLeaderboard(
   displayName: string,
   stats: any
 ): Promise<void> {
+  console.log('submitToLeaderboard called')
+  
   const supabase = getSupabase()
-  if (!supabase || !playerId) return
+  
+  console.log('Supabase instance:', supabase ? 'OK' : 'NULL')
+  console.log('Player ID:', playerId)
+  
+  if (!supabase) {
+    console.error('Supabase client is null - check env vars')
+    return
+  }
+  if (!playerId) {
+    console.error('Player ID is empty')
+    return
+  }
 
   const weekKey = getWeekKey()
+  console.log('Week key:', weekKey)
+  
   const weeklyWins = stats.weeklyWins?.[weekKey] || 0
+  
+  const payload = {
+    player_id: playerId,
+    display_name: displayName || 'Anonymous',
+    week_key: weekKey,
+    current_streak: stats.currentStreak || 0,
+    one_clue_wins: stats.oneClueWins || 0,
+    total_wins_this_week: weeklyWins,
+    badges_count: (stats.earnedBadges || []).length,
+    updated_at: new Date().toISOString()
+  }
+  
+  console.log('Payload to submit:', payload)
 
   try {
-    const { error } = await supabase
+    const { data, error } = await supabase
       .from('leaderboard')
-      .upsert(
-        {
-          player_id: playerId,
-          display_name: displayName || 'Anonymous',
-          week_key: weekKey,
-          current_streak: stats.currentStreak || 0,
-          one_clue_wins: stats.oneClueWins || 0,
-          total_wins_this_week: weeklyWins,
-          badges_count: (stats.earnedBadges || []).length,
-          updated_at: new Date().toISOString()
-        },
-        { onConflict: 'player_id,week_key' }
-      )
-    if (error) console.error('Submit error:', error)
-    else console.log('Score submitted successfully')
+      .upsert(payload, { onConflict: 'player_id,week_key' })
+      .select()
+
+    if (error) {
+      console.error('Supabase upsert error:', error)
+      console.error('Error details:', JSON.stringify(error))
+    } else {
+      console.log('Supabase upsert success:', data)
+    }
   } catch (e) {
-    console.error('Submit error:', e)
+    console.error('Supabase exception:', e)
   }
 }
 

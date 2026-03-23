@@ -7,6 +7,7 @@ import { sundayPuzzles, getSundayPuzzle, isSunday } from '../data/specialPuzzles
 import { Stats, getStats, updateStatsAfterGame, hasPlayedToday } from '../lib/statsUtils'
 import { Badge, checkNewBadges } from '../lib/badges'
 import { submitToLeaderboard } from '@/lib/supabase'
+import { getOrCreatePlayerId, getDisplayName } from '@/lib/playerUtils'
 import ResultCard from '../components/ResultCard'
 import InstallPrompt from '../components/InstallPrompt'
 import NotificationPopup from '../components/NotificationPopup'
@@ -214,9 +215,22 @@ export default function Home() {
       setStats(getStats())
       setGameFinished(true)
       
-      // Submit to leaderboard
-      submitToLeaderboard(playerId, username, updatedStats)
-      console.log('Submitted to leaderboard with Player ID:', playerId)
+      // Step 3: Submit to leaderboard with debugging
+      const playerIdForSubmit = getOrCreatePlayerId()
+      const displayNameForSubmit = getDisplayName() || 'Anonymous'
+      
+      console.log('Submitting to leaderboard:')
+      console.log('Player ID:', playerIdForSubmit)
+      console.log('Display Name:', displayNameForSubmit)
+      console.log('Stats:', updatedStats)
+      
+      submitToLeaderboard(playerIdForSubmit, displayNameForSubmit, updatedStats)
+        .then(() => console.log('Leaderboard submit done'))
+        .catch(e => console.error('Leaderboard submit failed:', e))
+      
+      // Old code kept for backup - remove after testing
+      // submitToLeaderboard(playerId, username, updatedStats)
+      // console.log('Submitted to leaderboard with Player ID:', playerId)
       
       // Step 4: Show badge popup after 2 seconds if new badges earned
       if (earnedBadges.length > 0) {
@@ -287,9 +301,22 @@ export default function Home() {
             setShowLoadingText(false)
             setGameFinished(true)
             
-            // Submit to leaderboard even on loss
-            submitToLeaderboard(playerId, username, updatedStats)
-            console.log('Submitted to leaderboard with Player ID:', playerId)
+            // Submit to leaderboard even on loss with debugging
+            const playerIdForSubmitLoss = getOrCreatePlayerId()
+            const displayNameForSubmitLoss = getDisplayName() || 'Anonymous'
+            
+            console.log('Submitting to leaderboard (loss):')
+            console.log('Player ID:', playerIdForSubmitLoss)
+            console.log('Display Name:', displayNameForSubmitLoss)
+            console.log('Stats:', updatedStats)
+            
+            submitToLeaderboard(playerIdForSubmitLoss, displayNameForSubmitLoss, updatedStats)
+              .then(() => console.log('Leaderboard submit done (loss)'))
+              .catch(e => console.error('Leaderboard submit failed (loss):', e))
+            
+            // Old code kept for backup - remove after testing
+            // submitToLeaderboard(playerId, username, updatedStats)
+            // console.log('Submitted to leaderboard with Player ID:', playerId)
             
             // Show badge popup if new badges earned
             if (earnedBadges.length > 0) {
