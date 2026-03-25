@@ -12,6 +12,7 @@ export default function ProfilePage() {
   const [playerId, setPlayerId] = useState('')
   const [editingName, setEditingName] = useState(false)
   const [newName, setNewName] = useState('')
+  const [isGenerating, setIsGenerating] = useState(false)
   const cardRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
