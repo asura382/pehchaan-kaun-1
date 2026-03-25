@@ -348,18 +348,8 @@ export default function Home() {
   const closeHowToPlay = () => setShowHowToPlay(false)
   const openStats = () => {
     // Read fresh stats from localStorage every time modal opens
-    const raw = localStorage.getItem('pehchaanKaunStats')
-    const freshStats = raw ? JSON.parse(raw) : {
-      totalPlayed: 0,
-      totalWon: 0,
-      currentStreak: 0,
-      maxStreak: 0,
-      earnedBadges: [],
-      oneClueWins: 0,
-      categoryWins: {},
-      consecutiveLosses: 0
-    }
-    console.log('Stats modal - Stats from localStorage:', freshStats)
+    const freshStats = getStats()
+    console.log('Opening stats:', freshStats)
     setStats(freshStats)
     setShowStats(true)
   }

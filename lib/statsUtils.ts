@@ -13,6 +13,7 @@ export interface Stats {
   oneClueWins: number
   categoryWins: Record<string, number>
   consecutiveLosses: number
+  weeklyWins?: Record<string, number>
 }
 
 const STORAGE_KEY = 'pehchaanKaunStats'
@@ -30,7 +31,8 @@ function getDefaultStats(): Stats {
     earnedBadges: [],
     oneClueWins: 0,
     categoryWins: {},
-    consecutiveLosses: 0
+    consecutiveLosses: 0,
+    weeklyWins: {}
   }
 }
 
@@ -116,18 +118,28 @@ export function updateStatsAfterGame(
   if (won) {
     stats.totalWon = (stats.totalWon || 0) + 1
     
-    // Streak logic
+    // Streak logic - improved for accuracy
     const yesterday = new Date()
     yesterday.setDate(yesterday.getDate() - 1)
-    const yesterdayString = yesterday.toDateString()
-    
-    if (stats.lastStreakDate === yesterdayString || stats.lastStreakDate === today) {
+    const yesterdayStr = yesterday.toDateString()
+    const todayStr = new Date().toDateString()
+
+    if (!stats.lastStreakDate) {
+      // First win ever
+      stats.currentStreak = 1
+    } else if (stats.lastStreakDate === yesterdayStr) {
+      // Played yesterday - increment streak
       stats.currentStreak = (stats.currentStreak || 0) + 1
+    } else if (stats.lastStreakDate === todayStr) {
+      // Already counted today - keep same
+      stats.currentStreak = stats.currentStreak || 1
     } else {
+      // Gap in days - reset streak
       stats.currentStreak = 1
     }
-    stats.lastStreakDate = today
-    
+
+    stats.lastStreakDate = todayStr
+
     if (stats.currentStreak > (stats.maxStreak || 0)) {
       stats.maxStreak = stats.currentStreak
     }

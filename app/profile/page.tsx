@@ -3,6 +3,8 @@
 import { useState, useEffect, useRef } from 'react'
 import { toPng } from 'html-to-image'
 import { ALL_BADGES, getRarityColor } from '@/lib/badges'
+import { getStats } from '@/lib/statsUtils'
+import { getOrCreatePlayerId } from '@/lib/playerUtils'
 
 export default function ProfilePage() {
   const [stats, setStats] = useState<any>(null)
@@ -10,24 +12,20 @@ export default function ProfilePage() {
   const [playerId, setPlayerId] = useState('')
   const [editingName, setEditingName] = useState(false)
   const [newName, setNewName] = useState('')
-  const [isGenerating, setIsGenerating] = useState(false)
   const cardRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const raw = localStorage.getItem('pehchaanKaunStats')
-    console.log('Profile page - Raw stats from localStorage:', raw)
-    if (raw) {
-      const parsed = JSON.parse(raw)
-      console.log('Profile page - Parsed stats:', parsed)
-      console.log('Profile page - Earned badge ids:', parsed.earnedBadges)
-      setStats(parsed)
-    }
+    // Read fresh stats from localStorage
+    const freshStats = getStats()
+    console.log('Profile stats:', freshStats)
+    setStats(freshStats)
+    
     const name = localStorage.getItem('pkUsername') || 'Pehchaan Master'
     setUsername(name)
     setNewName(name)
     
-    // Load Player ID
-    const id = localStorage.getItem('pkPlayerId') || 'Not Generated'
+    // Load Player ID using utility function
+    const id = getOrCreatePlayerId()
     setPlayerId(id)
   }, [])
 
